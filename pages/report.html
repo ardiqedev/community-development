@@ -1,0 +1,175 @@
+<!-- =========================================================
+     COMMUNITY DEVELOPMENT
+     LAPORAN PENERIMA MANFAAT
+     Report Workspace UI
+========================================================= -->
+
+<section class="page-section report-page">
+  <!-- =======================================================
+       PAGE HEADER
+  ======================================================== -->
+
+  <div class="page-header report-header">
+    <div class="page-header-content">
+      <div class="page-breadcrumb">
+        <span>Report</span>
+      </div>
+
+      <h1>Laporan Penerima Manfaat</h1>
+
+      <p>
+        Buat dan cetak laporan penerima manfaat berdasarkan desa, program, dan
+        tahun.
+      </p>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       FILTER LAPORAN
+  ======================================================== -->
+
+  <div class="card report-filter-card">
+    <div class="card-header">
+      <div>
+        <h2>Filter Laporan</h2>
+
+        <p>Pilih desa, program, dan tahun untuk menampilkan laporan.</p>
+      </div>
+
+      <div class="card-header-icon">⌕</div>
+    </div>
+
+    <div class="report-filter-body">
+      <!-- ===================================================
+           DESA
+      ==================================================== -->
+
+      <div class="filter-box report-filter-item">
+        <label for="reportDesaFilter">Desa</label>
+
+        <select id="reportDesaFilter">
+          <option value="">Semua Desa</option>
+        </select>
+      </div>
+
+      <!-- ===================================================
+           PROGRAM
+      ==================================================== -->
+
+      <div class="filter-box report-filter-item">
+        <label for="reportProgramFilter">Program</label>
+
+        <select id="reportProgramFilter">
+          <option value="">Semua Program</option>
+        </select>
+      </div>
+
+      <!-- ===================================================
+           TAHUN
+      ==================================================== -->
+
+      <div class="filter-box report-filter-item">
+        <label for="reportTahunFilter">Tahun</label>
+
+        <select id="reportTahunFilter">
+          <option value="2026">2026</option>
+        </select>
+      </div>
+
+      <!-- ===================================================
+           ACTION
+      ==================================================== -->
+
+      <div class="report-filter-action">
+        <button type="button" class="btn btn-primary" onclick="Report.load()">
+          <span class="btn-icon">⌕</span>
+          <span>Tampilkan Laporan</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       HASIL LAPORAN
+  ======================================================== -->
+
+  <div class="card report-result-card">
+    <!-- =====================================================
+         CARD HEADER
+    ====================================================== -->
+
+    <div class="card-header">
+      <div>
+        <h2>Hasil Laporan</h2>
+
+        <p id="reportResultDescription">
+          Silakan pilih filter dan tampilkan laporan.
+        </p>
+      </div>
+
+      <div class="page-header-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="Report.preview?.()"
+          id="reportPreviewButton"
+          disabled
+        >
+          <span class="btn-icon">▣</span>
+          <span>Preview Cetak</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         TABLE
+    ====================================================== -->
+
+    <div class="table-wrapper report-table-wrapper">
+      <table class="data-table report-table">
+        <thead>
+          <tr>
+            <th style="width: 55px">NO</th>
+
+            <th>NAMA PENDUDUK</th>
+
+            <th>NIK</th>
+
+            <th>DESA</th>
+
+            <th>PROGRAM</th>
+
+            <th style="width: 105px">STATUS</th>
+
+            <th style="width: 90px">AKSI</th>
+          </tr>
+        </thead>
+
+        <tbody id="reportTableBody">
+          <tr>
+            <td colspan="7" class="table-empty">
+              Belum ada laporan yang ditampilkan.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- =====================================================
+         PAGINATION
+    ====================================================== -->
+
+    <div class="report-pagination">
+      <div class="report-pagination-info" id="reportPaginationInfo">
+        Menampilkan 0 data
+      </div>
+
+      <div class="report-pagination-controls" id="reportPagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     REPORT MODAL
+     Menggunakan Global Modal Engine
+========================================================= -->

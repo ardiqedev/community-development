@@ -1,0 +1,515 @@
+<div class="page">
+  <!-- =====================================================
+       PAGE HEADER
+  ====================================================== -->
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1 class="page-title">Data Penduduk</h1>
+
+      <p class="page-subtitle">
+        Kelola data penduduk dalam program community development
+      </p>
+    </div>
+
+    <div class="page-header-actions">
+      <button type="button" class="btn btn-primary" id="btnTambahPenduduk">
+        <i data-lucide="plus"></i>
+
+        <span> Tambah Penduduk </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       SUMMARY
+  ====================================================== -->
+
+  <div class="grid grid-3">
+    <!-- ===================================================
+         TOTAL PENDUDUK
+    ==================================================== -->
+
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Total Penduduk </span>
+
+        <h2 class="stat-value" id="statTotalPenduduk">-</h2>
+
+        <span class="stat-change"> Seluruh Penduduk </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="users"></i>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         LAKI-LAKI
+    ==================================================== -->
+
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Laki-laki </span>
+
+        <h2 class="stat-value" id="statPendudukLaki">-</h2>
+
+        <span class="stat-change"> Penduduk Laki-laki </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="user"></i>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         PEREMPUAN
+    ==================================================== -->
+
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Perempuan </span>
+
+        <h2 class="stat-value" id="statPendudukPerempuan">-</h2>
+
+        <span class="stat-change"> Penduduk Perempuan </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="user-round"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       DATA TABLE
+  ====================================================== -->
+
+  <div class="card">
+    <!-- ===================================================
+         CARD HEADER
+    ==================================================== -->
+
+    <div class="card-header">
+      <div>
+        <h3 class="card-title">Daftar Penduduk</h3>
+
+        <p class="card-subtitle">Data penduduk yang terdaftar dalam sistem</p>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="database"></i>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         CARD BODY
+    ==================================================== -->
+
+    <div class="card-body">
+      <!-- =================================================
+           TOOLBAR
+      ================================================== -->
+
+      <div class="table-toolbar">
+        <!-- Search -->
+
+        <div class="search-box">
+          <i data-lucide="search"></i>
+
+          <input
+            type="search"
+            id="searchPenduduk"
+            placeholder="Cari NIK, nama, atau desa..."
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Refresh -->
+
+        <button type="button" class="btn btn-secondary" id="btnRefreshPenduduk">
+          <i data-lucide="refresh-cw"></i>
+
+          <span> Refresh </span>
+        </button>
+      </div>
+
+      <!-- =================================================
+           TABLE
+      ================================================== -->
+
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 60px">No</th>
+
+              <th>Penduduk</th>
+
+              <th>NIK</th>
+
+              <th>Jenis Kelamin</th>
+
+              <th>Desa</th>
+
+              <th>Status</th>
+
+              <th style="width: 100px">Aksi</th>
+            </tr>
+          </thead>
+
+          <tbody id="tablePenduduk">
+            <tr>
+              <td colspan="7" class="table-empty">Memuat data penduduk...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- =================================================
+           PAGINATION
+      ================================================== -->
+
+      <div class="table-footer" id="paginationPenduduk"></div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     MODAL TAMBAH PENDUDUK
+====================================================== -->
+
+<div class="modal-overlay" id="modalTambahPenduduk" aria-hidden="true">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTambahPendudukTitle"
+  >
+    <!-- =================================================
+         MODAL HEADER
+    ================================================== -->
+
+    <div class="modal-header">
+      <div>
+        <h2 class="modal-title" id="modalTambahPendudukTitle">
+          Tambah Penduduk
+        </h2>
+
+        <p class="modal-subtitle">
+          Tambahkan data penduduk baru ke dalam sistem
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="modal-close"
+        id="btnCloseTambahPenduduk"
+        aria-label="Tutup"
+      >
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- =================================================
+         FORM
+    ================================================== -->
+
+    <form id="formTambahPenduduk" autocomplete="off">
+      <div class="modal-body">
+        <!-- =============================================
+             IDENTITAS
+        ============================================== -->
+
+        <div class="form-section">
+          <div class="form-section-title">
+            <i data-lucide="user"></i>
+
+            <span>Identitas Penduduk</span>
+          </div>
+
+          <div class="form-grid">
+            <!-- NO KK -->
+
+            <div class="form-group">
+              <label for="inputPendudukNoKK" class="form-label"> No. KK </label>
+
+              <input
+                type="text"
+                id="inputPendudukNoKK"
+                name="NO_KK"
+                class="form-control"
+                placeholder="Masukkan nomor KK"
+                inputmode="numeric"
+                maxlength="16"
+              />
+            </div>
+
+            <!-- NIK -->
+
+            <div class="form-group">
+              <label for="inputPendudukNIK" class="form-label">
+                NIK
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukNIK"
+                name="NIK"
+                class="form-control"
+                placeholder="Masukkan NIK"
+                inputmode="numeric"
+                maxlength="16"
+                required
+              />
+            </div>
+
+            <!-- NAMA -->
+
+            <div class="form-group form-group-full">
+              <label for="inputPendudukNama" class="form-label">
+                Nama Lengkap
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukNama"
+                name="NAMA"
+                class="form-control"
+                placeholder="Masukkan nama lengkap"
+                maxlength="150"
+                required
+              />
+            </div>
+
+            <!-- JENIS KELAMIN -->
+
+            <div class="form-group">
+              <label for="inputPendudukJenisKelamin" class="form-label">
+                Jenis Kelamin
+                <span class="required">*</span>
+              </label>
+
+              <select
+                id="inputPendudukJenisKelamin"
+                name="JENIS_KELAMIN"
+                class="form-control"
+                required
+              >
+                <option value="">Pilih jenis kelamin</option>
+
+                <option value="Laki-laki">Laki-laki</option>
+
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+
+            <!-- TANGGAL LAHIR -->
+
+            <div class="form-group">
+              <label for="inputPendudukTanggalLahir" class="form-label">
+                Tanggal Lahir
+              </label>
+
+              <input
+                type="date"
+                id="inputPendudukTanggalLahir"
+                name="TANGGAL_LAHIR"
+                class="form-control"
+              />
+            </div>
+
+            <!-- AGAMA -->
+
+            <div class="form-group">
+              <label for="inputPendudukAgama" class="form-label"> Agama </label>
+
+              <select id="inputPendudukAgama" name="AGAMA" class="form-control">
+                <option value="">Pilih agama</option>
+
+                <option value="Islam">Islam</option>
+
+                <option value="Kristen">Kristen</option>
+
+                <option value="Katolik">Katolik</option>
+
+                <option value="Hindu">Hindu</option>
+
+                <option value="Buddha">Buddha</option>
+
+                <option value="Konghucu">Konghucu</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================
+             DOMISILI
+        ============================================== -->
+
+        <div class="form-section">
+          <div class="form-section-title">
+            <i data-lucide="map-pin"></i>
+
+            <span>Domisili</span>
+          </div>
+
+          <div class="form-grid">
+            <!-- DESA -->
+
+            <div class="form-group">
+              <label for="inputPendudukDesa" class="form-label">
+                Desa
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukDesa"
+                name="DESA"
+                class="form-control"
+                placeholder="Masukkan nama desa"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <!-- RESIDENCE -->
+
+            <div class="form-group">
+              <label for="inputPendudukResidence" class="form-label">
+                Residence
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukResidence"
+                name="RESIDENCE"
+                class="form-control"
+                placeholder="Masukkan residence"
+                maxlength="150"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================
+             PENDIDIKAN & PEKERJAAN
+        ============================================== -->
+
+        <div class="form-section">
+          <div class="form-section-title">
+            <i data-lucide="graduation-cap"></i>
+
+            <span>Pendidikan & Pekerjaan</span>
+          </div>
+
+          <div class="form-grid">
+            <!-- SEKOLAH -->
+
+            <div class="form-group">
+              <label for="inputPendudukSekolah" class="form-label">
+                Sekolah
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukSekolah"
+                name="SEKOLAH"
+                class="form-control"
+                placeholder="Nama sekolah"
+                maxlength="150"
+              />
+            </div>
+
+            <!-- KELAS -->
+
+            <div class="form-group">
+              <label for="inputPendudukKelas" class="form-label"> Kelas </label>
+
+              <input
+                type="text"
+                id="inputPendudukKelas"
+                name="KELAS"
+                class="form-control"
+                placeholder="Contoh: 6, IX, XII"
+                maxlength="30"
+              />
+            </div>
+
+            <!-- PEKERJAAN -->
+
+            <div class="form-group form-group-full">
+              <label for="inputPendudukPekerjaan" class="form-label">
+                Pekerjaan Terakhir
+              </label>
+
+              <input
+                type="text"
+                id="inputPendudukPekerjaan"
+                name="PEKERJAAN_TERAKHIR"
+                class="form-control"
+                placeholder="Masukkan pekerjaan terakhir"
+                maxlength="150"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================
+             STATUS
+        ============================================== -->
+
+        <div class="form-section">
+          <div class="form-section-title">
+            <i data-lucide="badge-check"></i>
+
+            <span>Status Penduduk</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="inputPendudukStatus" class="form-label">
+                Status Penduduk
+                <span class="required">*</span>
+              </label>
+
+              <select
+                id="inputPendudukStatus"
+                name="STATUS_PENDUDUK"
+                class="form-control"
+                required
+              >
+                <option value="Aktif">Aktif</option>
+
+                <option value="Tidak Aktif">Tidak Aktif</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================
+           MODAL FOOTER
+      ================================================== -->
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="btnBatalTambahPenduduk"
+        >
+          Batal
+        </button>
+
+        <button type="submit" class="btn btn-primary" id="btnSimpanPenduduk">
+          <i data-lucide="save"></i>
+
+          <span>Simpan Penduduk</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

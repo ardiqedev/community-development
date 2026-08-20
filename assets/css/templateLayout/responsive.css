@@ -1,0 +1,170 @@
+/* ==========================================
+   DIENG STAY PMS
+   RESPONSIVE
+========================================== */
+
+/* ==========================================
+   DESKTOP LARGE
+========================================== */
+
+@media (max-width: 1400px) {
+  .grid-5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-box {
+    width: 220px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  /* Sidebar */
+
+  .sidebar {
+    width: 80px;
+  }
+
+  .brand-text,
+  .menu-label,
+  .menu-item span,
+  .profile-info {
+    display: none;
+  }
+
+  .sidebar-brand,
+  .menu-item,
+  .profile {
+    justify-content: center;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  /* Navbar */
+
+  .navbar-title span {
+    display: none;
+  }
+
+  .search-box {
+    width: 180px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+
+    left: -280px;
+
+    height: 100vh;
+
+    width: 280px;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .brand-text,
+  .menu-label,
+  .menu-item span,
+  .profile-info {
+    display: block;
+  }
+
+  .sidebar-brand,
+  .menu-item,
+  .profile {
+    justify-content: flex-start;
+  }
+
+  .sidebar-header {
+    justify-content: flex-start;
+
+    padding: 0 24px;
+  }
+
+  /* Main */
+
+  .main {
+    width: 100%;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-title {
+    display: none;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .profile-detail {
+    display: none;
+  }
+
+  /* Grid */
+
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .content {
+    padding: 16px;
+  }
+
+  .navbar {
+    height: 64px;
+
+    padding: 0 12px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+}

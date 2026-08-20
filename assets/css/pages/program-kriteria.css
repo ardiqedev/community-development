@@ -1,0 +1,1189 @@
+/* =========================================================
+   COMMUNITY DEVELOPMENT
+   PROGRAM KRITERIA
+   PAGE SPECIFIC CSS
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.program-kriteria-page {
+  --pk-primary: #2563eb;
+  --pk-primary-soft: #eff6ff;
+  --pk-success: #16a34a;
+  --pk-success-soft: #f0fdf4;
+  --pk-danger: #dc2626;
+  --pk-danger-soft: #fef2f2;
+  --pk-warning: #d97706;
+  --pk-warning-soft: #fffbeb;
+  --pk-border: #e5e7eb;
+  --pk-muted: #64748b;
+  --pk-text: #0f172a;
+  --pk-surface: #ffffff;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.program-kriteria-header {
+  margin-bottom: 22px;
+}
+
+.program-kriteria-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.program-kriteria-breadcrumb .btn-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pk-primary);
+}
+
+.program-kriteria-breadcrumb .btn-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #94a3b8;
+}
+
+#programKriteriaBreadcrumb {
+  color: #64748b;
+}
+
+/* =========================================================
+   PROGRAM CONTEXT CARD
+========================================================= */
+
+.program-context-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 20px 22px;
+
+  margin-bottom: 18px;
+
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+
+  border: 1px solid var(--pk-border);
+  border-radius: 16px;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.program-context-icon {
+  width: 52px;
+  height: 52px;
+
+  flex: 0 0 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: var(--pk-primary-soft);
+  color: var(--pk-primary);
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.program-context-content {
+  min-width: 0;
+}
+
+.program-context-label {
+  margin-bottom: 4px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+
+  color: #94a3b8;
+}
+
+.program-context-content h2 {
+  margin: 0 0 5px;
+
+  font-size: 21px;
+  line-height: 1.25;
+
+  color: var(--pk-text);
+}
+
+.program-context-meta {
+  font-size: 13px;
+  color: var(--pk-muted);
+}
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.program-kriteria-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 15px 17px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+
+  background: #f8fbff;
+}
+
+.program-kriteria-info-icon {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: var(--pk-primary-soft);
+  color: var(--pk-primary);
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.program-kriteria-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+  color: var(--pk-text);
+}
+
+.program-kriteria-info p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.55;
+
+  color: var(--pk-muted);
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.program-kriteria-stats {
+  margin-bottom: 22px;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.program-kriteria-card {
+  overflow: hidden;
+}
+
+.program-kriteria-card-header {
+  padding-bottom: 18px;
+}
+
+.program-kriteria-card-header h2 {
+  margin-bottom: 5px;
+}
+
+.program-kriteria-card-header p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: var(--pk-muted);
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.program-kriteria-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.program-kriteria-search {
+  flex: 1 1 320px;
+  min-width: 220px;
+}
+
+.program-kriteria-status-filter {
+  flex: 0 0 170px;
+}
+
+.program-kriteria-status-filter select {
+  width: 100%;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.program-kriteria-list-wrapper {
+  overflow-x: auto;
+}
+
+/* =========================================================
+   TABLE RESET
+========================================================= */
+
+.program-kriteria-table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.program-kriteria-table thead th {
+  padding: 12px 14px;
+
+  border-bottom: 1px solid var(--pk-border);
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   CRITERIA ROW
+========================================================= */
+
+/*
+  JS tetap menghasilkan <tr>.
+  Di desktop kita buat setiap row terasa seperti
+  satu card.
+*/
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) {
+  background: var(--pk-surface);
+
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   CRITERIA CELLS
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td {
+  padding: 17px 14px;
+
+  border-top: 1px solid var(--pk-border);
+  border-bottom: 1px solid var(--pk-border);
+
+  vertical-align: middle;
+
+  background: #ffffff;
+}
+
+/* FIRST CELL */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:first-child {
+  border-left: 1px solid var(--pk-border);
+
+  border-radius: 14px 0 0 14px;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* LAST CELL */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:last-child {
+  border-right: 1px solid var(--pk-border);
+
+  border-radius: 0 14px 14px 0;
+}
+
+/* =========================================================
+   ID KRITERIA
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(2) {
+  color: var(--pk-primary);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(3) {
+  color: var(--pk-text);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   OPERATOR
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(4) {
+  text-align: center;
+}
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(4) {
+  color: var(--pk-primary);
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(5) {
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+/*
+  Jika JS menghasilkan badge status dengan class existing,
+  styling global tetap bisa bekerja.
+*/
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(6) {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(7) {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)):hover td {
+  background: #f8fbff;
+}
+
+.program-kriteria-table tbody tr:not(:has(.table-empty)):hover {
+  transform: translateY(-1px);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.program-kriteria-table .table-empty {
+  padding: 50px 20px;
+
+  border: 1px dashed var(--pk-border);
+
+  border-radius: 14px;
+
+  color: #94a3b8;
+
+  text-align: center;
+}
+
+/* =========================================================
+   FOOTER NOTE
+========================================================= */
+
+.program-kriteria-footer {
+  padding: 14px 18px;
+
+  border-top: 1px solid var(--pk-border);
+
+  background: #fafafa;
+}
+
+.program-kriteria-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+.program-kriteria-footer-icon {
+  color: var(--pk-primary);
+}
+
+/* =========================================================
+   DESKTOP CARD EFFECT
+========================================================= */
+
+@media (min-width: 1100px) {
+  .program-kriteria-table {
+    min-width: 900px;
+  }
+
+  .program-context-card {
+    padding: 22px 24px;
+  }
+
+  .program-context-icon {
+    width: 56px;
+    height: 56px;
+
+    flex-basis: 56px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .program-kriteria-toolbar {
+    align-items: stretch;
+  }
+
+  .program-kriteria-search {
+    flex: 1 1 100%;
+  }
+
+  .program-kriteria-status-filter {
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .program-kriteria-header {
+    margin-bottom: 16px;
+  }
+
+  /* -------------------------------------------------------
+     HEADER
+  ------------------------------------------------------- */
+
+  .program-kriteria-header .page-header-actions {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 14px;
+  }
+
+  .program-kriteria-header .page-header-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* -------------------------------------------------------
+     PROGRAM CONTEXT
+  ------------------------------------------------------- */
+
+  .program-context-card {
+    gap: 13px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+  }
+
+  .program-context-icon {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+  }
+
+  .program-context-content h2 {
+    font-size: 17px;
+  }
+
+  .program-context-meta {
+    font-size: 11px;
+  }
+
+  /* -------------------------------------------------------
+     INFO
+  ------------------------------------------------------- */
+
+  .program-kriteria-info {
+    padding: 13px;
+
+    margin-bottom: 16px;
+  }
+
+  /* -------------------------------------------------------
+     SUMMARY
+  ------------------------------------------------------- */
+
+  .program-kriteria-stats {
+    gap: 10px;
+  }
+
+  /* -------------------------------------------------------
+     MAIN CARD
+  ------------------------------------------------------- */
+
+  .program-kriteria-card {
+    border-radius: 14px;
+  }
+
+  /* -------------------------------------------------------
+     CARD HEADER
+  ------------------------------------------------------- */
+
+  .program-kriteria-card-header {
+    padding: 17px;
+  }
+
+  .program-kriteria-card-header h2 {
+    font-size: 16px;
+  }
+
+  .program-kriteria-card-header p {
+    font-size: 11px;
+  }
+
+  /* -------------------------------------------------------
+     TOOLBAR
+  ------------------------------------------------------- */
+
+  .program-kriteria-toolbar {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    padding: 12px;
+
+    gap: 8px;
+  }
+
+  .program-kriteria-search {
+    grid-column: 1 / -1;
+
+    min-width: 0;
+  }
+
+  .program-kriteria-status-filter {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .program-kriteria-toolbar > .btn {
+    width: auto;
+  }
+
+  /* -------------------------------------------------------
+     TABLE → CARD MODE
+  ------------------------------------------------------- */
+
+  .program-kriteria-list-wrapper {
+    overflow: visible;
+    padding: 0 12px;
+  }
+
+  .program-kriteria-table,
+  .program-kriteria-table tbody {
+    display: block;
+
+    width: 100%;
+  }
+
+  .program-kriteria-table thead {
+    display: none;
+  }
+
+  /* EACH ROW = CARD */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) {
+    display: grid;
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+
+    gap: 0;
+
+    margin-bottom: 12px;
+
+    border: 1px solid var(--pk-border);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.045);
+  }
+
+  /* ALL CELLS */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td {
+    display: block;
+
+    padding: 0;
+
+    border: 0 !important;
+
+    border-radius: 0 !important;
+
+    background: #ffffff;
+  }
+
+  /* NO */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(1) {
+    grid-column: 1;
+
+    padding: 15px 0 0 15px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+  }
+
+  /* ID */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(2) {
+    grid-column: 2;
+
+    padding: 15px 0 0 10px;
+
+    color: var(--pk-primary);
+
+    font-size: 11px;
+  }
+
+  /* FIELD */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(3) {
+    grid-column: 1 / -1;
+
+    padding: 11px 15px 0;
+
+    color: var(--pk-text);
+
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  /* OPERATOR */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(4) {
+    grid-column: 1 / -1;
+
+    padding: 12px 15px 0;
+
+    text-align: left;
+
+    color: var(--pk-primary);
+
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  /* VALUE */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(5) {
+    grid-column: 1 / -1;
+
+    padding: 5px 15px 14px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* STATUS */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(6) {
+    grid-column: 1 / -1;
+
+    padding: 0 15px 13px;
+  }
+
+  /* ACTION */
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) td:nth-child(7) {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 15px;
+
+    border-top: 1px solid var(--pk-border) !important;
+
+    background: #fafafa;
+  }
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
+  .program-kriteria-footer {
+    padding: 12px 15px;
+  }
+
+  .program-kriteria-footer-info {
+    align-items: flex-start;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .program-kriteria-header .page-header-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .program-kriteria-header .page-header-actions .btn {
+    min-height: 42px;
+  }
+
+  .program-context-card {
+    padding: 14px;
+  }
+
+  .program-context-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .program-kriteria-info {
+    gap: 9px;
+  }
+
+  .program-kriteria-info p {
+    font-size: 10px;
+  }
+
+  .program-kriteria-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .program-kriteria-status-filter,
+  .program-kriteria-toolbar > .btn {
+    width: 100%;
+  }
+
+  .program-kriteria-table tbody tr:not(:has(.table-empty)) {
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================================================
+   PROGRAM KRITERIA MODAL
+========================================================= */
+
+#programKriteriaModalContainer {
+  position: relative;
+  z-index: 99999;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+#programKriteriaModal.modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.48);
+
+  backdrop-filter: blur(4px);
+
+  z-index: 99999 !important;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+/* =========================================================
+   SHOW
+========================================================= */
+
+#programKriteriaModal.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================================
+   MODAL BOX
+========================================================= */
+
+#programKriteriaModal .modal {
+  position: relative;
+
+  width: min(560px, 100%);
+
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+
+  overflow: hidden;
+
+  transform: translateY(12px) scale(0.98);
+
+  transition: transform 0.2s ease;
+}
+
+#programKriteriaModal.show .modal {
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+#programKriteriaModal .modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+#programKriteriaModal .modal-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+#programKriteriaModal .modal-header p {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+#programKriteriaModal .modal-close {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+#programKriteriaModal .modal-close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+#programKriteriaModal .modal-body {
+  padding: 22px 24px;
+
+  overflow-y: auto;
+
+  max-height: calc(100vh - 190px);
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+#programKriteriaModal .form-group {
+  margin-bottom: 18px;
+}
+
+#programKriteriaModal .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+#programKriteriaModal .form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  color: #334155;
+}
+
+#programKriteriaModal .required {
+  color: #ef4444;
+}
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+#programKriteriaModal input,
+#programKriteriaModal select,
+#programKriteriaModal textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  min-height: 42px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+#programKriteriaModal input:focus,
+#programKriteriaModal select:focus,
+#programKriteriaModal textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+#programKriteriaModal .form-group small {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 10px;
+  line-height: 1.45;
+
+  color: #94a3b8;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+#programKriteriaModal .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding: 15px 24px;
+
+  border-top: 1px solid #e5e7eb;
+
+  background: #fafafa;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  #programKriteriaModal.modal-overlay {
+    align-items: flex-end;
+
+    padding: 12px;
+  }
+
+  #programKriteriaModal .modal {
+    width: 100%;
+
+    max-height: calc(100vh - 24px);
+
+    border-radius: 16px;
+  }
+
+  #programKriteriaModal .modal-header {
+    padding: 17px 18px;
+  }
+
+  #programKriteriaModal .modal-header h2 {
+    font-size: 18px;
+  }
+
+  #programKriteriaModal .modal-body {
+    padding: 18px;
+
+    max-height: calc(100vh - 190px);
+  }
+
+  #programKriteriaModal .modal-footer {
+    padding: 13px 18px;
+  }
+
+  #programKriteriaModal .modal-footer .btn {
+    flex: 1;
+
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  #programKriteriaModal.modal-overlay {
+    padding: 8px;
+  }
+
+  #programKriteriaModal .modal {
+    max-height: calc(100vh - 16px);
+
+    border-radius: 14px;
+  }
+
+  #programKriteriaModal .modal-header {
+    padding: 15px;
+  }
+
+  #programKriteriaModal .modal-body {
+    padding: 16px;
+  }
+
+  #programKriteriaModal .modal-footer {
+    padding: 12px 15px;
+  }
+}

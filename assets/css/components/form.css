@@ -1,0 +1,197 @@
+/* =========================================
+   FORM SYSTEM
+========================================= */
+
+/* =========================================
+   FORM
+========================================= */
+
+.form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.form-section {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.form-section-title {
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: var(--text);
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* =========================================
+   ROW
+========================================= */
+
+.form-row {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+/* full width */
+
+.form-row.full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+.form-label span {
+  color: #ef4444;
+
+  margin-left: 4px;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-control {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  color: var(--text);
+
+  transition: 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea.form-control {
+  min-height: 110px;
+
+  resize: vertical;
+
+  padding: 14px 16px;
+}
+
+/* =========================================
+   SELECT
+========================================= */
+
+select.form-control {
+  cursor: pointer;
+}
+
+/* =========================================
+   HELP TEXT
+========================================= */
+
+.form-text {
+  font-size: 12px;
+
+  color: var(--text-light);
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.form-error {
+  font-size: 12px;
+
+  color: #ef4444;
+}
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.form-check {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.form-switch {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* =========================================
+   INVALID
+========================================= */
+
+.form-control.is-invalid {
+  border-color: #ef4444;
+
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.form-error {
+  margin-top: 6px;
+
+  font-size: 13px;
+
+  color: #ef4444;
+}

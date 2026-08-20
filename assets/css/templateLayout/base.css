@@ -1,0 +1,174 @@
+/* ==========================================
+   DIENG STAY PMS
+   BASE STYLES
+========================================== */
+
+/* ==========================================
+   RESET
+========================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   HTML
+========================================== */
+
+html {
+  font-size: 16px;
+
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+
+  color: var(--text);
+
+  line-height: 1.3;
+}
+
+p {
+  color: var(--text-light);
+}
+
+/* ==========================================
+   LINK
+========================================== */
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* ==========================================
+   LIST
+========================================== */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+  font-family: inherit;
+
+  border: none;
+
+  outline: none;
+
+  background: none;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  border: none;
+
+  background: none;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection {
+  background: var(--primary);
+
+  color: #fff;
+}

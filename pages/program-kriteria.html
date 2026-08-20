@@ -1,0 +1,286 @@
+<!-- =========================================================
+     COMMUNITY DEVELOPMENT
+     PROGRAM KRITERIA PAGE
+========================================================= -->
+
+<section class="page-section program-kriteria-page">
+  <!-- =======================================================
+       PAGE HEADER
+  ======================================================== -->
+
+  <div class="page-header program-kriteria-header">
+    <div class="page-header-content">
+      <div>
+        <!-- BREADCRUMB -->
+
+        <div class="page-breadcrumb program-kriteria-breadcrumb">
+          <button
+            type="button"
+            class="btn-link"
+            onclick="ProgramKriteria.backToProgram()"
+          >
+            ← Kembali ke Program
+          </button>
+
+          <span class="breadcrumb-separator">/</span>
+
+          <span id="programKriteriaBreadcrumb"> Kriteria Program </span>
+        </div>
+
+        <!-- TITLE -->
+
+        <h1>Kriteria Program</h1>
+
+        <p id="programKriteriaSubtitle">
+          Kelola kriteria penerima manfaat program
+        </p>
+      </div>
+    </div>
+
+    <!-- HEADER ACTION -->
+
+    <div class="page-header-actions">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="ProgramKriteria.load()"
+      >
+        ↻
+        <span>Refresh</span>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="ProgramKriteria.openCreate()"
+      >
+        <span class="btn-icon">+</span>
+        <span>Tambah Kriteria</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       SUMMARY
+       
+       DIPINDAHKAN KE ATAS
+  ======================================================== -->
+
+  <div class="stats-grid program-kriteria-stats">
+    <!-- TOTAL -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Total Kriteria</div>
+
+          <div class="stat-value" id="programKriteriaTotal">0</div>
+
+          <div class="stat-description">Seluruh aturan program</div>
+        </div>
+
+        <div class="stat-icon">#</div>
+      </div>
+    </div>
+
+    <!-- AKTIF -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Kriteria Aktif</div>
+
+          <div class="stat-value" id="programKriteriaAktif">0</div>
+
+          <div class="stat-description">Digunakan dalam evaluasi</div>
+        </div>
+
+        <div class="stat-icon">✓</div>
+      </div>
+    </div>
+
+    <!-- OPERATOR -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Aturan</div>
+
+          <div class="stat-value" id="programKriteriaOperator">0</div>
+
+          <div class="stat-description">Operator yang digunakan</div>
+        </div>
+
+        <div class="stat-icon">≡</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       PROGRAM CONTEXT
+  ======================================================== -->
+
+  <div class="program-context-card">
+    <!-- PROGRAM ICON -->
+
+    <div class="program-context-icon">⚙</div>
+
+    <!-- PROGRAM INFO -->
+
+    <div class="program-context-content">
+      <div class="program-context-label">PROGRAM</div>
+
+      <h2 id="programKriteriaProgramName">Memuat program...</h2>
+
+      <div id="programKriteriaProgramInfo" class="program-context-meta">-</div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       INFO / DESCRIPTION
+  ======================================================== -->
+
+  <div class="program-kriteria-info">
+    <div class="program-kriteria-info-icon">ℹ</div>
+
+    <div>
+      <strong> Aturan Penerima Manfaat </strong>
+
+      <p>
+        Atur kondisi yang harus dipenuhi penduduk agar dapat menjadi penerima
+        manfaat program ini.
+      </p>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       KRITERIA SECTION
+  ======================================================== -->
+
+  <div class="card program-kriteria-card">
+    <!-- =====================================================
+         CARD HEADER
+    ====================================================== -->
+
+    <div class="card-header program-kriteria-card-header">
+      <div>
+        <h2>Daftar Kriteria</h2>
+
+        <p>
+          Kondisi yang digunakan untuk menentukan kelayakan penerima manfaat
+        </p>
+      </div>
+
+      <div class="card-header-icon">⚙</div>
+    </div>
+
+    <!-- =====================================================
+         TOOLBAR
+    ====================================================== -->
+
+    <div class="card-toolbar program-kriteria-toolbar">
+      <!-- SEARCH -->
+
+      <div class="search-box program-kriteria-search">
+        <span class="search-icon"> ⌕ </span>
+
+        <input
+          type="text"
+          id="programKriteriaSearch"
+          placeholder="Cari kriteria, operator, atau nilai..."
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- STATUS FILTER -->
+
+      <div class="filter-box program-kriteria-status-filter">
+        <select id="programKriteriaStatusFilter">
+          <option value="">Semua Status</option>
+
+          <option value="AKTIF">AKTIF</option>
+
+          <option value="NONAKTIF">NONAKTIF</option>
+        </select>
+      </div>
+
+      <!-- RESET -->
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="ProgramKriteria.resetFilter()"
+      >
+        Reset
+      </button>
+    </div>
+
+    <!-- =====================================================
+         KRITERIA LIST
+
+         NOTE:
+         Tetap menggunakan TABLE + TBODY karena
+         program-kriteria.js saat ini melakukan render
+         ke #programKriteriaTableBody.
+
+         CSS berikutnya dapat mengubah setiap TR
+         menjadi CARD.
+    ====================================================== -->
+
+    <div class="table-wrapper program-kriteria-list-wrapper">
+      <table class="data-table program-kriteria-table">
+        <!-- TABLE HEADER -->
+
+        <thead>
+          <tr>
+            <th style="width: 70px">No</th>
+
+            <th style="width: 120px">ID Kriteria</th>
+
+            <th>Kriteria</th>
+
+            <th style="width: 130px">Kondisi</th>
+
+            <th>Nilai</th>
+
+            <th style="width: 110px">Status</th>
+
+            <th style="width: 160px">Aksi</th>
+          </tr>
+        </thead>
+
+        <!-- DATA -->
+
+        <tbody id="programKriteriaTableBody">
+          <tr>
+            <td colspan="7" class="table-empty">Memuat data kriteria...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- =====================================================
+         FOOTER NOTE
+    ====================================================== -->
+
+    <div class="program-kriteria-footer">
+      <div class="program-kriteria-footer-info">
+        <span class="program-kriteria-footer-icon"> ℹ </span>
+
+        <span>
+          Setiap kriteria akan digunakan sebagai dasar evaluasi kelayakan
+          penerima manfaat.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROGRAM KRITERIA MODAL
+
+     Diisi secara dinamis oleh:
+     ProgramKriteria.openModal()
+========================================================= -->
+
+<div id="programKriteriaModalContainer"></div>

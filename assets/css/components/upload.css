@@ -1,0 +1,245 @@
+/* =========================================
+   UPLOAD
+========================================= */
+
+.upload {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================================
+   DROPZONE
+========================================= */
+
+.upload-box {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 180px;
+
+  padding: 32px;
+
+  border: 2px dashed var(--border);
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+
+  background: #f8fbff;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.upload-icon {
+  width: 64px;
+
+  height: 64px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #eff6ff;
+
+  color: var(--primary);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.upload-title {
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.upload-text {
+  color: var(--text-light);
+
+  text-align: center;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.upload input {
+  display: none;
+}
+
+/* =========================================
+   PREVIEW
+========================================= */
+
+.upload-preview {
+  display: none;
+
+  gap: 16px;
+
+  align-items: center;
+
+  padding: 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  animation: fadeUpload 0.25s ease;
+}
+
+.upload-preview.show {
+  display: flex;
+}
+
+.upload-info {
+  flex: 1;
+}
+
+.upload-name {
+  font-weight: 600;
+}
+
+.upload-size {
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: var(--text-light);
+}
+
+/* =========================================
+   REMOVE
+========================================= */
+
+.upload-remove {
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 0;
+}
+
+.upload-remove:hover {
+  background: #fef2f2;
+
+  color: #ef4444;
+}
+
+.upload-image {
+  width: 70px;
+
+  height: 70px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition: 0.25s;
+}
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.upload-box.active {
+  border-color: var(--primary);
+
+  background: #eff6ff;
+}
+
+.upload-box.error {
+  border-color: #ef4444;
+
+  background: #fef2f2;
+}
+
+.upload-preview.show {
+  display: flex;
+}
+
+@keyframes fadeUpload {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-box {
+    padding: 20px;
+
+    min-height: 150px;
+  }
+
+  .upload-image {
+    width: 56px;
+
+    height: 56px;
+  }
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.upload-box.loading {
+  pointer-events: none;
+
+  opacity: 0.6;
+}
+
+.upload-box.success {
+  border-color: #22c55e;
+}
+
+.upload-image:hover {
+  transform: scale(1.04);
+}

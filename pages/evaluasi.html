@@ -1,0 +1,257 @@
+<!-- =========================================================
+     COMMUNITY DEVELOPMENT
+     EVALUASI PAGE
+========================================================= -->
+
+<section class="page-section evaluasi-page">
+  <!-- =======================================================
+       PAGE HEADER
+  ======================================================== -->
+
+  <div class="page-header evaluasi-header">
+    <div class="page-header-content">
+      <div>
+        <div class="page-breadcrumb evaluasi-breadcrumb">
+          <span>Community Development</span>
+          <span class="breadcrumb-separator">/</span>
+          <span>Evaluasi</span>
+        </div>
+
+        <h1>Evaluasi Program</h1>
+
+        <p id="evaluasiSubtitle">
+          Riwayat evaluasi kelayakan penerima manfaat berdasarkan program dan
+          kriteria.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-header-actions">
+      <button type="button" class="btn btn-secondary" onclick="Evaluasi.load()">
+        <span class="btn-icon">↻</span>
+        <span>Refresh</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       SUMMARY
+  ======================================================== -->
+
+  <div class="stats-grid evaluasi-stats">
+    <!-- TOTAL -->
+
+    <div class="stat-card evaluasi-stat-total">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Total Evaluasi</div>
+
+          <div class="stat-value" id="evaluasiTotal">0</div>
+
+          <div class="stat-description">Seluruh evaluasi program</div>
+        </div>
+
+        <div class="stat-icon">◎</div>
+      </div>
+    </div>
+
+    <!-- SELESAI -->
+
+    <div class="stat-card evaluasi-stat-selesai">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Evaluasi Selesai</div>
+
+          <div class="stat-value" id="evaluasiSelesai">0</div>
+
+          <div class="stat-description">Evaluasi yang telah selesai</div>
+        </div>
+
+        <div class="stat-icon">✓</div>
+      </div>
+    </div>
+
+    <!-- PROGRAM -->
+
+    <div class="stat-card evaluasi-stat-program">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Program</div>
+
+          <div class="stat-value" id="evaluasiProgram">0</div>
+
+          <div class="stat-description">Program yang telah dievaluasi</div>
+        </div>
+
+        <div class="stat-icon">#</div>
+      </div>
+    </div>
+
+    <!-- PERIODE -->
+
+    <div class="stat-card evaluasi-stat-periode">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Periode</div>
+
+          <div class="stat-value" id="evaluasiPeriode">-</div>
+
+          <div class="stat-description">Periode evaluasi terakhir</div>
+        </div>
+
+        <div class="stat-icon">◷</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       INFORMATION
+  ======================================================== -->
+
+  <div class="program-kriteria-info evaluasi-info">
+    <div class="program-kriteria-info-icon">ℹ</div>
+
+    <div>
+      <strong> Riwayat Evaluasi </strong>
+
+      <p>
+        Setiap evaluasi menyimpan hasil pemeriksaan penduduk berdasarkan
+        kriteria aktif pada program dan desa tertentu.
+      </p>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       MAIN CARD
+  ======================================================== -->
+
+  <div class="card evaluasi-card">
+    <!-- =====================================================
+         CARD HEADER
+    ====================================================== -->
+
+    <div class="card-header evaluasi-card-header">
+      <div>
+        <div class="evaluasi-card-kicker">RIWAYAT</div>
+
+        <h2>Daftar Evaluasi</h2>
+
+        <p>Riwayat proses evaluasi penerima manfaat</p>
+      </div>
+
+      <div class="card-header-icon">◎</div>
+    </div>
+
+    <!-- =====================================================
+         TOOLBAR
+    ====================================================== -->
+
+    <div class="card-toolbar evaluasi-toolbar">
+      <!-- SEARCH -->
+
+      <div class="search-box evaluasi-search">
+        <span class="search-icon"> ⌕ </span>
+
+        <input
+          type="text"
+          id="evaluasiSearch"
+          placeholder="Cari ID evaluasi, program, atau desa..."
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- PROGRAM -->
+
+      <div class="filter-box">
+        <select id="evaluasiProgramFilter">
+          <option value="">Semua Program</option>
+        </select>
+      </div>
+
+      <!-- DESA -->
+
+      <div class="filter-box">
+        <select id="evaluasiDesaFilter">
+          <option value="">Semua Desa</option>
+        </select>
+      </div>
+
+      <!-- STATUS -->
+
+      <div class="filter-box">
+        <select id="evaluasiStatusFilter">
+          <option value="">Semua Status</option>
+
+          <option value="SELESAI">SELESAI</option>
+
+          <option value="PROSES">PROSES</option>
+        </select>
+      </div>
+
+      <!-- RESET -->
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="Evaluasi.resetFilter()"
+      >
+        Reset
+      </button>
+    </div>
+
+    <!-- =====================================================
+         TABLE
+    ====================================================== -->
+
+    <div class="table-wrapper evaluasi-list-wrapper">
+      <table class="data-table evaluasi-table">
+        <thead>
+          <tr>
+            <th class="col-no">No</th>
+
+            <th class="col-id">ID Evaluasi</th>
+
+            <th class="col-program">Program</th>
+
+            <th class="col-desa">Desa</th>
+
+            <th class="col-periode">Periode</th>
+
+            <th class="col-tanggal">Tgl Evaluasi</th>
+
+            <th class="col-total">Penduduk</th>
+
+            <th class="col-memenuhi">Memenuhi</th>
+
+            <th class="col-tidak">Tidak Memenuhi</th>
+
+            <th class="col-status">Status</th>
+
+            <th class="col-aksi">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="evaluasiTableBody">
+          <tr>
+            <td colspan="11" class="table-empty">Memuat data evaluasi...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div class="program-kriteria-footer evaluasi-footer">
+      <div class="program-kriteria-footer-info">
+        <span class="program-kriteria-footer-icon"> ℹ </span>
+
+        <span>
+          Data evaluasi merupakan riwayat hasil pemeriksaan kelayakan penduduk
+          berdasarkan kriteria program.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

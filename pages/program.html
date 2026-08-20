@@ -1,0 +1,178 @@
+<!-- =========================================================
+     COMMUNITY DEVELOPMENT
+     PROGRAM PAGE
+========================================================= -->
+
+<section class="page-section">
+  <!-- =======================================================
+       PAGE HEADER
+  ======================================================== -->
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <div>
+        <h1>Program</h1>
+
+        <p>Kelola program community development</p>
+      </div>
+    </div>
+
+    <div class="page-header-actions">
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="Program.openCreate()"
+      >
+        <span class="btn-icon">+</span>
+        Tambah Program
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       SUMMARY
+  ======================================================== -->
+
+  <div class="stats-grid">
+    <!-- =====================================================
+         TOTAL PROGRAM
+    ====================================================== -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Total Program</div>
+
+          <div class="stat-value" id="programTotal">0</div>
+
+          <div class="stat-description">Seluruh Program</div>
+        </div>
+
+        <div class="stat-icon">◎</div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         PROGRAM AKTIF
+    ====================================================== -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Program Aktif</div>
+
+          <div class="stat-value" id="programAktif">0</div>
+
+          <div class="stat-description">Program yang sedang aktif</div>
+        </div>
+
+        <div class="stat-icon">✓</div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         KATEGORI
+    ====================================================== -->
+
+    <div class="stat-card">
+      <div class="stat-card-content">
+        <div>
+          <div class="stat-label">Kategori</div>
+
+          <div class="stat-value" id="programKategoriTotal">0</div>
+
+          <div class="stat-description">Kategori program</div>
+        </div>
+
+        <div class="stat-icon">#</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       DAFTAR PROGRAM
+  ======================================================== -->
+
+  <div class="card">
+    <!-- =====================================================
+         CARD HEADER
+    ====================================================== -->
+
+    <div class="card-header">
+      <div>
+        <h2>Daftar Program</h2>
+
+        <p>Program community development yang terdaftar dalam sistem</p>
+      </div>
+
+      <div class="card-header-icon">◎</div>
+    </div>
+
+    <!-- =====================================================
+         TOOLBAR
+    ====================================================== -->
+
+    <div class="card-toolbar">
+      <!-- ===================================================
+           SEARCH
+      ==================================================== -->
+
+      <div class="search-box">
+        <span class="search-icon"> ⌕ </span>
+
+        <input
+          type="text"
+          id="programSearch"
+          placeholder="Cari nama program, ID, atau kategori..."
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- ===================================================
+           FILTER KATEGORI
+      ==================================================== -->
+
+      <div class="filter-box">
+        <select id="programKategoriFilter">
+          <option value="">Semua Kategori</option>
+
+          <!--
+            Diisi dinamis oleh Program.loadKategori()
+            dari master PENGATURAN
+          -->
+        </select>
+      </div>
+
+      <!-- ===================================================
+           REFRESH
+      ==================================================== -->
+
+      <button type="button" class="btn btn-secondary" onclick="Program.load()">
+        ↻ Refresh
+      </button>
+    </div>
+
+    <!-- =====================================================
+         PROGRAM GRID
+    ====================================================== -->
+
+    <div id="programTableBody" class="program-grid">
+      <!--
+        Card program akan dirender
+        oleh Program.render()
+      -->
+
+      <div class="program-grid-empty">
+        <div class="program-empty-icon">◎</div>
+
+        <div class="program-empty-title">Memuat data program...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROGRAM MODAL
+========================================================= -->
+
+<div id="programModalContainer"></div>

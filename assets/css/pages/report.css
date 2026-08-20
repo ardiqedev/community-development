@@ -1,0 +1,1737 @@
+/* =========================================================
+   COMMUNITY DEVELOPMENT
+   LAPORAN PENERIMA MANFAAT
+   PAGE STYLES
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.report-page {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.report-header {
+  margin-bottom: 20px;
+}
+
+.report-header .page-header-content {
+  min-width: 0;
+}
+
+.report-header .page-breadcrumb {
+  margin-bottom: 4px;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.report-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.report-header p {
+  margin: 6px 0 0;
+
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.report-page .card {
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.report-filter-card {
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.report-page .card-header {
+  min-height: 64px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  border-bottom: 1px solid #e7ebf1;
+}
+
+.report-page .card-header h2 {
+  margin: 0;
+
+  color: #1e293b;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.report-page .card-header p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.report-page .card-header-icon {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  background: #eff6ff;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+/* =========================================================
+   FILTER BODY
+========================================================= */
+
+.report-filter-body {
+  padding: 18px 20px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1fr)
+    minmax(240px, 1.2fr)
+    minmax(130px, 0.55fr)
+    auto;
+
+  align-items: end;
+  gap: 14px;
+}
+
+/* =========================================================
+   FILTER ITEM
+========================================================= */
+
+.report-filter-item {
+  min-width: 0;
+}
+
+.report-filter-item label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.report-filter-item select {
+  width: 100%;
+  height: 40px;
+
+  appearance: auto;
+
+  padding: 0 12px;
+
+  color: #334155;
+  background: #ffffff;
+
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.report-filter-item select:hover {
+  border-color: #bfdbfe;
+}
+
+.report-filter-item select:focus {
+  border-color: #60a5fa;
+
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+/* =========================================================
+   FILTER ACTION
+========================================================= */
+
+.report-filter-action {
+  display: flex;
+  align-items: flex-end;
+}
+
+.report-filter-action .btn {
+  height: 40px;
+  min-height: 40px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.report-page .btn {
+  min-height: 40px;
+
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: #334155;
+  background: #ffffff;
+
+  border: 1px solid #dbe4f0;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.report-page .btn:hover {
+  transform: translateY(-1px);
+}
+
+.report-page .btn:active {
+  transform: translateY(0);
+}
+
+.report-page .btn-primary {
+  color: #ffffff;
+
+  background: #2563eb;
+  border-color: #2563eb;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+.report-page .btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.report-page .btn-secondary {
+  color: #2563eb;
+
+  background: #ffffff;
+  border-color: #dbe4f0;
+}
+
+.report-page .btn-secondary:hover {
+  background: #f8fbff;
+  border-color: #bfdbfe;
+}
+
+.report-page .btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 16px;
+}
+
+/* =========================================================
+   RESULT CARD
+========================================================= */
+
+.report-result-card {
+  overflow: hidden;
+}
+
+/* =========================================================
+   RESULT HEADER
+========================================================= */
+
+.report-result-card .card-header {
+  min-height: 68px;
+}
+
+.report-result-card .page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+#reportPreviewButton {
+  min-width: 145px;
+}
+
+/* =========================================================
+   RESULT DESCRIPTION
+========================================================= */
+
+#reportResultDescription {
+  color: #64748b;
+}
+
+#reportResultDescription strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.report-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.report-page .data-table {
+  width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.report-page .data-table thead th {
+  height: 42px;
+
+  padding: 0 12px;
+
+  color: #64748b;
+  background: #f8fafc;
+
+  border-bottom: 1px solid #e5eaf0;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.report-page .data-table thead th:first-child {
+  padding-left: 18px;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.report-page .data-table tbody td {
+  height: 46px;
+
+  padding: 7px 12px;
+
+  color: #334155;
+
+  border-bottom: 1px solid #eef2f7;
+
+  vertical-align: middle;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.report-page .data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.report-page .data-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.report-page .data-table tbody td:first-child {
+  padding-left: 18px;
+
+  color: #64748b;
+}
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.report-page .report-table tbody td:nth-child(2) {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* =========================================================
+   NIK
+========================================================= */
+
+.report-page .report-table tbody td:nth-child(3) {
+  color: #64748b;
+
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.report-page .report-table tbody td:last-child {
+  text-align: left;
+}
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.report-status-badge {
+  min-height: 22px;
+
+  padding: 3px 9px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.report-status-badge.aktif {
+  color: #15803d;
+  background: #dcfce7;
+
+  border: 1px solid #bbf7d0;
+}
+
+.report-status-badge.nonaktif {
+  color: #64748b;
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.report-page .table-empty {
+  height: 150px !important;
+
+  color: #94a3b8 !important;
+
+  text-align: center !important;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.report-pagination {
+  min-height: 48px;
+
+  padding: 8px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  border-top: 1px solid #eef2f7;
+}
+
+.report-pagination-info {
+  color: #64748b;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+.report-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.report-pagination-controls button {
+  min-width: 29px;
+  height: 29px;
+
+  padding: 0 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.report-pagination-controls button:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.report-pagination-controls button.active {
+  color: #ffffff;
+
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.report-pagination-controls button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.report-loading {
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .report-filter-body {
+    grid-template-columns:
+      minmax(160px, 1fr)
+      minmax(200px, 1fr)
+      minmax(120px, 0.6fr);
+  }
+
+  .report-filter-action {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .report-header h1 {
+    font-size: 23px;
+  }
+
+  .report-filter-body {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .report-filter-action {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .report-filter-action .btn {
+    width: 100%;
+  }
+
+  .report-result-card .card-header {
+    align-items: flex-start;
+  }
+
+  .report-result-card .page-header-actions {
+    width: auto;
+  }
+
+  #reportPreviewButton {
+    min-width: auto;
+  }
+
+  .report-page .data-table {
+    min-width: 700px;
+  }
+
+  .report-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-pagination-controls {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* =========================================================
+   DETAIL BUTTON
+========================================================= */
+
+.report-detail-btn {
+  height: 28px;
+  min-width: 58px;
+
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.report-detail-btn:hover {
+  color: #1d4ed8;
+
+  background: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+.report-detail-btn:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   REPORT DETAIL MODAL
+========================================================= */
+
+.report-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   IDENTITY
+========================================================= */
+
+.report-detail-identity {
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e7edf5;
+  border-radius: 12px;
+}
+
+.report-detail-avatar {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  background: #eff6ff;
+
+  border-radius: 12px;
+}
+
+.report-detail-avatar svg {
+  width: 23px;
+  height: 23px;
+}
+
+.report-detail-identity-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.report-detail-label {
+  margin-bottom: 3px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.report-detail-name {
+  color: #0f172a;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.report-detail-nik {
+  margin-top: 3px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.report-detail-identity-status {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.report-detail-status {
+  min-height: 24px;
+
+  padding: 4px 10px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.report-detail-status.aktif {
+  color: #15803d;
+  background: #dcfce7;
+
+  border: 1px solid #bbf7d0;
+}
+
+.report-detail-status.nonaktif {
+  color: #64748b;
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+}
+
+.report-detail-status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.report-detail-section {
+  padding: 16px;
+
+  border: 1px solid #e7edf5;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.report-detail-section-title {
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.report-detail-section-title svg {
+  width: 15px;
+  height: 15px;
+
+  color: #2563eb;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.report-detail-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px 20px;
+}
+
+.report-detail-field {
+  min-width: 0;
+}
+
+.report-detail-field-label {
+  margin-bottom: 4px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.report-detail-field-value {
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+.report-detail-code {
+  color: #64748b;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.report-detail-note {
+  min-height: 50px;
+
+  padding: 11px 12px;
+
+  color: #475569;
+  background: #f8fafc;
+
+  border: 1px solid #edf1f6;
+  border-radius: 8px;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .report-detail-identity {
+    align-items: flex-start;
+  }
+
+  .report-detail-identity-status {
+    margin-left: auto;
+  }
+
+  .report-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .report-page .card-header {
+    padding: 14px 15px;
+  }
+
+  .report-filter-body {
+    padding: 15px;
+  }
+
+  .report-result-card .page-header-actions {
+    width: 100%;
+  }
+
+  #reportPreviewButton {
+    width: 100%;
+  }
+
+  .report-page .data-table {
+    min-width: 680px;
+  }
+}
+
+/* =========================================================
+   PRINT PREVIEW
+========================================================= */
+
+.report-print-preview {
+  width: 100%;
+
+  padding: 10px;
+
+  background: #eef2f7;
+
+  border-radius: 10px;
+
+  overflow: auto;
+}
+
+/* =========================================================
+   PAPER
+========================================================= */
+
+.report-print-paper {
+  width: 794px;
+  min-height: 1123px;
+
+  margin: 0 auto;
+
+  padding: 42px 45px;
+
+  background: #ffffff;
+
+  color: #1e293b;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.print-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  padding-bottom: 20px;
+}
+
+.print-logo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.print-logo-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+}
+
+.print-logo-icon svg {
+  width: 38px;
+  height: 38px;
+}
+
+.print-title {
+  text-align: center;
+}
+
+.print-title-main {
+  color: #0f172a;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+}
+
+.print-title-sub {
+  margin-top: 3px;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.print-information {
+  width: 70%;
+
+  margin: 0 auto 18px;
+}
+
+.print-information-row {
+  display: grid;
+
+  grid-template-columns: 115px 1fr;
+
+  gap: 5px;
+
+  min-height: 20px;
+
+  font-size: 10px;
+}
+
+.print-information-row span {
+  color: #475569;
+}
+
+.print-information-row strong {
+  color: #1e293b;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.print-section-title {
+  margin-top: 15px;
+  margin-bottom: 7px;
+
+  padding: 6px 9px;
+
+  color: #334155;
+
+  background: #eff3f8;
+
+  border-radius: 2px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.print-summary {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 6px;
+}
+
+.print-summary-card {
+  padding: 9px 6px;
+
+  text-align: center;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 5px;
+}
+
+.print-summary-label {
+  color: #64748b;
+
+  font-size: 8px;
+}
+
+.print-summary-value {
+  margin-top: 4px;
+
+  color: #0f172a;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.print-summary-unit {
+  margin-top: 1px;
+
+  color: #64748b;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.print-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 9px;
+}
+
+.print-table th {
+  padding: 7px 6px;
+
+  color: #334155;
+
+  background: #f1f5f9;
+
+  border: 1px solid #dbe3ec;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.print-table td {
+  padding: 6px;
+
+  color: #334155;
+
+  border: 1px solid #e2e8f0;
+
+  vertical-align: middle;
+}
+
+.print-table .print-no {
+  text-align: center;
+}
+
+.print-table .print-name {
+  font-weight: 600;
+}
+
+.print-status {
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.print-status-active {
+  color: #15803d;
+}
+
+.print-status-other {
+  color: #64748b;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.print-footer {
+  margin-top: 25px;
+
+  padding-top: 8px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  color: #94a3b8;
+
+  border-top: 1px solid #e2e8f0;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .report-print-paper,
+  .report-print-paper * {
+    visibility: visible;
+  }
+
+  .report-print-paper {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 0;
+
+    padding: 15mm;
+
+    box-shadow: none;
+  }
+
+  .report-print-preview {
+    padding: 0;
+
+    background: #ffffff;
+  }
+
+  @page {
+    size: A4 portrait;
+
+    margin: 0;
+  }
+}
+
+/* =========================================================
+   KARTU PENERIMA MANFAAT
+   PRINT LAYOUT
+   A4 LANDSCAPE
+========================================================= */
+
+#reportDetailPrintContainer {
+  display: none;
+}
+
+/* =========================================================
+   A4 LANDSCAPE PRINT PAGE
+========================================================= */
+
+.report-card-print-page {
+  width: 297mm;
+  height: 210mm;
+
+  display: grid;
+
+  grid-template-columns:
+    148.5mm
+    148.5mm;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   LEFT HALF
+   1/2 A4 = A5
+========================================================= */
+
+.report-benefit-card {
+  width: 148.5mm;
+  height: 210mm;
+
+  box-sizing: border-box;
+
+  padding: 14mm;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ec;
+
+  color: #1e293b;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   RIGHT HALF
+   KOSONG
+========================================================= */
+
+.report-card-print-empty {
+  width: 148.5mm;
+  height: 210mm;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.benefit-card-header {
+  padding-bottom: 7mm;
+
+  border-bottom: 1.5px solid #2563eb;
+
+  text-align: center;
+}
+
+.benefit-card-brand-title {
+  color: #475569;
+
+  font-size: 9pt;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.benefit-card-brand-subtitle {
+  margin-top: 2mm;
+
+  color: #0f172a;
+
+  font-size: 13pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   IDENTITY
+========================================================= */
+
+.benefit-card-identity {
+  margin-top: 7mm;
+
+  padding: 5mm;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 4mm;
+}
+
+.benefit-card-identity-label {
+  margin-bottom: 3mm;
+
+  color: #94a3b8;
+
+  font-size: 7pt;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.benefit-card-identity-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 4mm;
+}
+
+.benefit-card-person {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.benefit-card-name {
+  color: #0f172a;
+
+  font-size: 15pt;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  word-break: break-word;
+}
+
+.benefit-card-nik {
+  margin-top: 2mm;
+
+  color: #64748b;
+
+  font-size: 8pt;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.benefit-card-status {
+  flex-shrink: 0;
+
+  padding: 2mm 3mm;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 1.5mm;
+
+  border-radius: 20mm;
+
+  font-size: 7pt;
+
+  font-weight: 800;
+}
+
+.benefit-card-status.aktif {
+  color: #15803d;
+
+  background: #dcfce7;
+
+  border: 1px solid #bbf7d0;
+}
+
+.benefit-card-status.nonaktif {
+  color: #64748b;
+
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+}
+
+.benefit-card-status-dot {
+  width: 1.8mm;
+  height: 1.8mm;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+/* =========================================================
+   PROGRAM SECTION
+========================================================= */
+
+.benefit-card-section {
+  margin-top: 7mm;
+}
+
+.benefit-card-section-title {
+  margin-bottom: 4mm;
+
+  padding: 2.5mm 3mm;
+
+  color: #334155;
+
+  background: #eff6ff;
+
+  border-left: 1.2mm solid #2563eb;
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+/* =========================================================
+   PROGRAM GRID
+========================================================= */
+
+.benefit-card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 5mm 6mm;
+}
+
+.benefit-card-field {
+  min-width: 0;
+}
+
+.benefit-card-field span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: #94a3b8;
+
+  font-size: 6.5pt;
+
+  font-weight: 600;
+}
+
+.benefit-card-field strong {
+  display: block;
+
+  color: #1e293b;
+
+  font-size: 8.5pt;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.benefit-card-footer {
+  margin-top: auto;
+
+  padding-top: 6mm;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 5mm;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.benefit-card-id span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: #94a3b8;
+
+  font-size: 6.5pt;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+.benefit-card-id strong {
+  color: #475569;
+
+  font-size: 8pt;
+
+  font-weight: 700;
+}
+
+.benefit-card-signature {
+  min-width: 42mm;
+
+  text-align: center;
+}
+
+.benefit-card-signature span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 6.5pt;
+}
+
+.benefit-card-sign-line {
+  width: 36mm;
+
+  margin: 9mm auto 1.5mm;
+
+  border-bottom: 1px solid #64748b;
+}
+
+.benefit-card-signature small {
+  color: #64748b;
+
+  font-size: 6.5pt;
+}
+
+/* =========================================================
+   PRINT INFO
+========================================================= */
+
+.benefit-card-print-info {
+  margin-top: 4mm;
+
+  color: #cbd5e1;
+
+  font-size: 5.5pt;
+
+  text-align: right;
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  html,
+  body {
+    width: 297mm;
+
+    height: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+  }
+
+  body > * {
+    visibility: hidden !important;
+  }
+
+  #reportDetailPrintContainer {
+    display: block !important;
+
+    visibility: visible !important;
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 297mm;
+
+    height: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+  #reportDetailPrintContainer * {
+    visibility: visible !important;
+  }
+
+  .report-card-print-page {
+    width: 297mm;
+
+    height: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      148.5mm
+      148.5mm;
+
+    background: #ffffff;
+  }
+
+  .report-benefit-card {
+    width: 148.5mm;
+
+    height: 210mm;
+
+    box-sizing: border-box;
+
+    box-shadow: none;
+  }
+
+  .report-card-print-empty {
+    width: 148.5mm;
+
+    height: 210mm;
+
+    background: #ffffff;
+  }
+
+  @page {
+    size: A4 landscape;
+
+    margin: 0;
+  }
+}

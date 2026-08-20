@@ -1,0 +1,253 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 72px;
+
+  padding: 0 24px;
+
+  background: var(--card);
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================
+   LEFT
+========================================== */
+
+.navbar-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+/* ==========================================
+   RIGHT
+========================================== */
+
+.navbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.nav-button {
+  position: relative;
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  transition: 0.25s;
+}
+
+.nav-button:hover {
+  background: var(--primary-light);
+
+  color: var(--primary);
+}
+
+.nav-button svg {
+  width: 20px;
+
+  height: 20px;
+}
+
+/* ==========================================
+   PAGE TITLE
+========================================== */
+
+.navbar-title {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.navbar-title h1 {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+.navbar-title span {
+  margin-top: 2px;
+
+  font-size: 13px;
+
+  color: var(--text-light);
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.search-box {
+  width: 320px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: #fff;
+}
+
+.search-box svg {
+  width: 18px;
+
+  height: 18px;
+
+  color: var(--text-light);
+}
+
+.search-box input {
+  flex: 1;
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: var(--text-light);
+}
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.badge-dot {
+  position: absolute;
+
+  top: 9px;
+
+  right: 9px;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 6px 12px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  transition: 0.25s;
+}
+
+.profile-button:hover {
+  background: var(--primary-light);
+}
+
+.profile-detail {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.profile-detail strong {
+  font-size: 14px;
+
+  color: var(--text);
+}
+
+.profile-detail small {
+  font-size: 12px;
+
+  color: var(--text-light);
+}
+
+.profile-button svg {
+  width: 18px;
+
+  height: 18px;
+}
+
+/* ==========================================
+   PROFILE AVATAR
+========================================== */
+
+.profile-avatar {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}

@@ -1,0 +1,47 @@
+/* =========================================
+   TEMPLATE
+========================================= */
+
+@import url("templateLayout/variables.css");
+@import url("templateLayout/base.css");
+@import url("templateLayout/layout.css");
+@import url("templateLayout/sidebar.css");
+@import url("templateLayout/navbar.css");
+
+/* =========================================
+   COMPONENTS
+========================================= */
+
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/badge.css");
+@import url("components/form.css");
+@import url("components/modal.css");
+@import url("components/detail.css");
+@import url("components/table.css");
+@import url("components/pagination.css");
+@import url("components/loading.css");
+@import url("components/skeleton.css");
+@import url("components/toast.css");
+@import url("components/confirm.css");
+@import url("components/upload.css");
+@import url("components/stat.css");
+
+/* =========================================
+   PAGES
+========================================= */
+
+/* nanti di sini */
+
+/* @import url("pages/dashboard.css"); */
+@import url("pages/penduduk.css");
+@import url("pages/program.css");
+@import url("pages/program-kriteria.css");
+@import url("pages/penerima-manfaat.css");
+@import url("pages/report.css");
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@import url("templateLayout/responsive.css");

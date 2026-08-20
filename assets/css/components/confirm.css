@@ -1,0 +1,175 @@
+/* =========================================
+   OVERLAY
+========================================= */
+
+.confirm-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  backdrop-filter: blur(5px);
+
+  z-index: 99999;
+
+  animation: confirmFade 0.2s ease;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.confirm {
+  width: 100%;
+
+  max-width: 420px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.18),
+    0 8px 24px rgba(15, 23, 42, 0.08);
+
+  animation: confirmShow 0.25s ease;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.confirm-icon {
+  width: 72px;
+
+  height: 72px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 20px;
+}
+
+.confirm-danger .confirm-icon {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.confirm-warning .confirm-icon {
+  background: #fef3c7;
+
+  color: #d97706;
+}
+
+.confirm-success .confirm-icon {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+.confirm-info .confirm-icon {
+  background: #dbeafe;
+
+  color: #2563eb;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.confirm-title {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.confirm-message {
+  margin-top: 10px;
+
+  color: var(--text-light);
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.confirm-footer {
+  margin-top: 28px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes confirmFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes confirmShow {
+  from {
+    opacity: 0;
+
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+  .confirm {
+    margin: 20px;
+
+    padding: 24px;
+  }
+
+  .confirm-footer {
+    flex-direction: column;
+  }
+}

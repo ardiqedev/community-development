@@ -1,0 +1,135 @@
+/* =========================================
+   LOADING OVERLAY
+========================================= */
+
+.loading-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  backdrop-filter: blur(6px);
+
+  z-index: 99999;
+
+  animation: loadingFade 0.2s ease;
+}
+
+.loading-overlay.show {
+  display: flex;
+}
+
+/* =========================================
+   BOX
+========================================= */
+
+.loading-box {
+  width: 240px;
+
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 18px;
+
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.18),
+    0 8px 24px rgba(15, 23, 42, 0.08);
+
+  animation: loadingShow 0.25s ease;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.loading-icon {
+  width: 56px;
+
+  height: 56px;
+
+  color: var(--primary);
+
+  animation: loadingSpin 0.8s linear infinite;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.loading-text {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: var(--text);
+
+  text-align: center;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes loadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingShow {
+  from {
+    opacity: 0;
+
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .loading-box {
+    width: 210px;
+
+    padding: 24px;
+  }
+
+  .loading-spinner {
+    width: 48px;
+
+    height: 48px;
+  }
+}

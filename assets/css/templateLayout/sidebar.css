@@ -1,0 +1,236 @@
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  background: var(--card);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.sidebar-header {
+  height: 72px;
+
+  padding: 0 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 14px;
+
+  background: var(--primary);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow: var(--shadow);
+}
+
+.brand-icon svg {
+  width: 24px;
+
+  height: 24px;
+}
+
+.brand-text h2 {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+.brand-text p {
+  font-size: 13px;
+
+  color: var(--text-light);
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+.sidebar-body {
+  flex: 1;
+
+  padding: 20px 14px;
+
+  overflow-y: auto;
+}
+
+/* ==========================================
+   MENU
+========================================== */
+
+.menu-section {
+  margin-bottom: 28px;
+}
+
+.menu-label {
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  color: var(--text-light);
+
+  font-weight: 700;
+
+  margin: 0 12px 10px;
+
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 16px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  color: var(--text-light);
+}
+
+.menu-item svg {
+  width: 20px;
+
+  height: 20px;
+}
+
+.menu-item span {
+  font-weight: 600;
+}
+
+.menu-item:hover {
+  background: var(--primary-light);
+
+  color: var(--primary);
+}
+
+.menu-item.active {
+  background: var(--primary);
+
+  color: #fff;
+
+  box-shadow: var(--shadow);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.sidebar-footer {
+  padding: 18px;
+
+  border-top: 1px solid var(--border);
+}
+
+.profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.profile-avatar {
+  width: 46px;
+
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  color: #fff;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.profile-info {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.profile-role {
+  font-size: 12px;
+
+  color: var(--text-light);
+}
+
+/* ==========================================
+   COLLAPSE
+========================================== */
+
+.sidebar.collapsed {
+  width: 84px;
+}
+
+.sidebar.collapsed .brand-text,
+.sidebar.collapsed .menu-label,
+.sidebar.collapsed .menu-item span,
+.sidebar.collapsed .profile-info {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-brand,
+.sidebar.collapsed .menu-item,
+.sidebar.collapsed .profile {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-header {
+  padding: 0;
+
+  justify-content: center;
+}

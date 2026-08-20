@@ -1,0 +1,619 @@
+/* ============================================================
+   DIENG NET
+   PUBLIC — PENGINAPAN
+============================================================ */
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.listing-hero {
+  position: relative;
+
+  padding: 90px 0 80px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.9),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #f3f0e8, #faf9f5 55%, #eef1eb);
+}
+
+.listing-hero-content {
+  max-width: 980px;
+}
+
+.listing-hero h1 {
+  max-width: 780px;
+
+  margin: 18px 0 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 7vw, 86px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.listing-hero p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: rgba(17, 24, 39, 0.65);
+}
+
+/* ============================================================
+   FILTER
+============================================================ */
+
+.listing-filter {
+  display: grid;
+
+  grid-template-columns:
+    1.6fr
+    1fr
+    1fr
+    auto;
+
+  gap: 12px;
+
+  align-items: end;
+
+  max-width: 1000px;
+
+  margin-top: 40px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(17, 24, 39, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  box-shadow: 0 20px 50px rgba(17, 24, 39, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+.listing-filter-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.listing-filter-item label {
+  padding-left: 3px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(17, 24, 39, 0.52);
+}
+
+.listing-filter input,
+.listing-filter select {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(17, 24, 39, 0.11);
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #17201d;
+
+  font: inherit;
+}
+
+.listing-filter input:focus,
+.listing-filter select:focus {
+  border-color: rgba(17, 24, 39, 0.35);
+
+  box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.06);
+}
+
+.listing-filter-button {
+  height: 48px;
+
+  min-width: 110px;
+
+  border-radius: 11px;
+}
+
+/* ============================================================
+   LISTING
+============================================================ */
+
+.listing-section {
+  padding: 95px 0;
+}
+
+.listing-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.listing-heading h2 {
+  margin: 10px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 5vw, 56px);
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.listing-count {
+  padding-bottom: 6px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: rgba(17, 24, 39, 0.5);
+}
+
+/* ============================================================
+   GRID
+============================================================ */
+
+.listing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.stay-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 24, 39, 0.08);
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow: 0 10px 35px rgba(17, 24, 39, 0.055);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.stay-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(17, 24, 39, 0.1);
+}
+
+/* ============================================================
+   IMAGE
+============================================================ */
+
+.stay-image {
+  position: relative;
+
+  display: block;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #e8e5dc, #dfe5df);
+}
+
+.stay-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.stay-card:hover .stay-image img {
+  transform: scale(1.04);
+}
+
+.stay-image-placeholder {
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(135deg, #e8e5dc, #dfe5df);
+}
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.stay-content {
+  padding: 24px;
+}
+
+.stay-location {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  color: rgba(17, 24, 39, 0.46);
+}
+
+.stay-content h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+}
+
+.stay-content p {
+  display: -webkit-box;
+
+  min-height: 48px;
+
+  margin: 12px 0 22px;
+
+  overflow: hidden;
+
+  color: rgba(17, 24, 39, 0.6);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+}
+
+.stay-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.stay-price {
+  font-size: 13px;
+
+  color: rgba(17, 24, 39, 0.55);
+}
+
+.stay-price strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #17201d;
+
+  font-size: 15px;
+}
+
+.text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  color: #17201d;
+}
+
+.text-link span {
+  transition: transform 0.16s ease;
+}
+
+.text-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.stay-loading {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.stay-loading-card {
+  height: 360px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(90deg, #f0f0ed 25%, #fafaf8 50%, #f0f0ed 75%);
+
+  background-size: 200% 100%;
+
+  animation: staySkeleton 1.4s infinite;
+}
+
+@keyframes staySkeleton {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.listing-loading {
+  display: grid;
+
+  place-items: center;
+
+  gap: 12px;
+
+  min-height: 180px;
+}
+
+.listing-loading-spinner {
+  width: 34px;
+
+  height: 34px;
+
+  border: 3px solid rgba(17, 24, 39, 0.1);
+
+  border-top-color: #17201d;
+
+  border-radius: 50%;
+
+  animation: staySpin 0.7s linear infinite;
+}
+
+@keyframes staySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   EMPTY / ERROR
+============================================================ */
+
+.stay-empty,
+.stay-error {
+  grid-column: 1 / -1;
+
+  padding: 70px 24px;
+
+  text-align: center;
+
+  border: 1px dashed rgba(17, 24, 39, 0.14);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.stay-empty-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 52px;
+
+  height: 52px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #17201d;
+
+  color: #fff;
+
+  font-size: 24px;
+}
+
+.stay-empty h3,
+.stay-error h3 {
+  margin: 0 0 8px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+}
+
+.stay-empty p,
+.stay-error p {
+  margin: 0;
+
+  color: rgba(17, 24, 39, 0.55);
+}
+
+/* ============================================================
+   CTA
+============================================================ */
+
+.listing-cta {
+  padding: 0 0 110px;
+}
+
+.listing-cta-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 60px;
+
+  border-radius: 24px;
+
+  background: #17201d;
+
+  color: #fff;
+}
+
+.listing-cta-card h2 {
+  max-width: 700px;
+
+  margin: 14px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(40px, 6vw, 66px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.listing-cta-card p {
+  max-width: 600px;
+
+  margin: 0 0 28px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 980px) {
+  .listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .listing-filter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .listing-hero {
+    padding: 70px 0 60px;
+  }
+
+  .listing-hero h1 {
+    font-size: clamp(42px, 12vw, 62px);
+  }
+
+  .listing-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-section {
+    padding: 70px 0;
+  }
+
+  .listing-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .listing-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .stay-loading {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-loading-card {
+    height: 300px;
+  }
+
+  .listing-cta-card {
+    padding: 50px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-hero h1 br {
+    display: none;
+  }
+
+  .stay-card-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .text-link {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}

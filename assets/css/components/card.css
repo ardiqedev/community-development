@@ -1,0 +1,300 @@
+/* ==========================================
+   DIENG UI
+   CARD
+========================================== */
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.card-title {
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+/* ==========================================
+   CARD SUBTITLE
+========================================== */
+
+.card-subtitle {
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: var(--text-light);
+}
+
+/* ==========================================
+   CARD BODY
+========================================== */
+
+.card-body {
+  padding: 24px;
+}
+
+/* ==========================================
+   CARD FOOTER
+========================================== */
+
+.card-footer {
+  padding: 18px 24px;
+
+  border-top: 1px solid var(--border);
+}
+
+/* ==========================================
+   CARD SIMPLE
+========================================== */
+
+.card-simple {
+  padding: 24px;
+}
+
+/* ==========================================
+   STAT CARD
+========================================== */
+
+.stat-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.stat-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+
+  color: var(--text-light);
+}
+
+.stat-value {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+.stat-change {
+  font-size: 13px;
+
+  color: var(--success);
+}
+
+.stat-icon {
+  width: 58px;
+
+  height: 58px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--primary-light);
+
+  color: var(--primary);
+}
+
+.stat-icon svg {
+  width: 28px;
+
+  height: 28px;
+}
+
+/* ==========================================
+   OCCUPANCY
+========================================== */
+
+.occupancy-percent {
+  font-size: 40px;
+
+  font-weight: 700;
+
+  color: var(--primary);
+
+  margin-bottom: 18px;
+}
+
+.progress {
+  width: 100%;
+
+  height: 12px;
+
+  border-radius: 999px;
+
+  background: #e5e7eb;
+
+  overflow: hidden;
+
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.occupancy-info {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  text-align: center;
+
+  gap: 20px;
+}
+
+.occupancy-info strong {
+  display: block;
+
+  font-size: 24px;
+
+  color: var(--text);
+}
+
+.occupancy-info span {
+  font-size: 13px;
+
+  color: var(--text-light);
+}
+
+/* ==========================================
+   ROOM STATUS
+========================================== */
+
+.room-status-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.room-status-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.room-status-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 15px;
+
+  color: var(--text);
+}
+
+.room-status-item strong {
+  font-size: 18px;
+
+  color: var(--text);
+}
+
+.dot {
+  width: 12px;
+
+  height: 12px;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+.dot.success {
+  background: #22c55e;
+}
+
+.dot.primary {
+  background: #2563eb;
+}
+
+.dot.warning {
+  background: #f59e0b;
+}
+
+.dot.danger {
+  background: #ef4444;
+}
+
+.room-total {
+  margin-top: 28px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid var(--border);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-weight: 600;
+}
+
+.room-total strong {
+  font-size: 22px;
+
+  color: var(--primary);
+}

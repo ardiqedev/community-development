@@ -1,0 +1,39 @@
+<!-- =========================================
+     UPLOAD COMPONENT
+========================================= -->
+
+<div class="upload" data-upload="{{id}}">
+  <input type="file" accept="{{accept}}" hidden />
+
+  <!-- Upload Box -->
+
+  <label class="upload-box">
+    <div class="upload-icon">
+      <i data-lucide="image-plus"></i>
+    </div>
+
+    <div class="upload-title">Klik untuk memilih file</div>
+
+    <div class="upload-description">{{description}}</div>
+  </label>
+
+  <!-- Preview -->
+
+  <div class="upload-preview">
+    <img class="upload-image" src="" alt="Preview" />
+
+    <div class="upload-info">
+      <div class="upload-name">-</div>
+
+      <div class="upload-size">-</div>
+    </div>
+
+    <button
+      type="button"
+      class="upload-remove"
+      onclick="Upload.remove('{{id}}')"
+    >
+      <i data-lucide="trash-2"></i>
+    </button>
+  </div>
+</div>

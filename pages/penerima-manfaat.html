@@ -1,0 +1,450 @@
+<!-- =========================================================
+     COMMUNITY DEVELOPMENT
+     PENERIMA MANFAAT
+     Workspace UI
+========================================================= -->
+
+<section class="page-section penerima-page">
+  <!-- =======================================================
+       PAGE HEADER
+  ======================================================== -->
+
+  <div class="page-header penerima-header">
+    <div class="page-header-content">
+      <div class="page-breadcrumb">
+        <span>Penerima Manfaat</span>
+      </div>
+
+      <h1>Penerima Manfaat</h1>
+
+      <p>
+        Kelola dan tetapkan penerima manfaat berdasarkan program dan kriteria
+      </p>
+    </div>
+
+    <div class="page-header-actions">
+      <button
+        type="button"
+        class="btn btn-secondary penerima-btn-refresh"
+        onclick="PenerimaManfaat.load()"
+      >
+        <span class="btn-icon">↻</span>
+        <span>Refresh</span>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-primary penerima-btn-evaluasi"
+        onclick="PenerimaManfaat.evaluasiUlang?.()"
+      >
+        <span class="btn-icon">▶</span>
+        <span>Evaluasi Ulang</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       PROGRAM SELECTOR
+  ======================================================== -->
+
+  <div class="card penerima-program-card">
+    <div class="penerima-program-selector">
+      <!-- PROGRAM ICON -->
+
+      <div class="penerima-program-icon">👥</div>
+
+      <!-- PROGRAM SELECT -->
+
+      <div class="penerima-program-main">
+        <div class="penerima-program-label">Pilih Program</div>
+
+        <div class="penerima-program-select-wrapper">
+          <select id="penerimaProgramSelect" class="penerima-program-select">
+            <option value="">Pilih Program</option>
+          </select>
+
+          <span class="penerima-program-arrow"> ▾ </span>
+        </div>
+
+        <div class="penerima-program-code" id="penerimaProgramCode">-</div>
+      </div>
+
+      <!-- PROGRAM DESCRIPTION -->
+
+      <div class="penerima-program-description">
+        <div class="penerima-program-description-label">Deskripsi Program</div>
+
+        <p id="penerimaProgramDescription">
+          Pilih program untuk melihat deskripsi program.
+        </p>
+      </div>
+
+      <!-- CRITERIA BUTTON -->
+
+      <button
+        type="button"
+        class="btn btn-secondary penerima-btn-kriteria"
+        onclick="PenerimaManfaat.lihatKriteria?.()"
+      >
+        <span class="btn-icon"> ☷ </span>
+
+        <span> Lihat Kriteria </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       WORKSPACE
+  ======================================================== -->
+
+  <div class="penerima-workspace">
+    <!-- =====================================================
+         LEFT
+         CALON PENERIMA
+    ====================================================== -->
+
+    <div class="card penerima-panel penerima-calon-panel">
+      <!-- PANEL HEADER -->
+
+      <div class="penerima-panel-header">
+        <div>
+          <div class="penerima-panel-title-row">
+            <h2>Calon Penerima</h2>
+
+            <span class="penerima-count-badge" id="penerimaCalonBadge">
+              0
+            </span>
+          </div>
+
+          <p>
+            Penduduk yang memenuhi semua kriteria program namun belum
+            ditetapkan.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================================================
+           CANDIDATE TOOLBAR
+      ==================================================== -->
+
+      <div class="penerima-panel-toolbar">
+        <div class="search-box penerima-calon-search">
+          <span class="search-icon"> ⌕ </span>
+
+          <input
+            type="text"
+            id="penerimaCalonSearch"
+            placeholder="Cari penduduk, NIK, atau nama..."
+            autocomplete="off"
+          />
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-secondary penerima-filter-btn"
+          onclick="PenerimaManfaat.toggleCalonFilter?.()"
+        >
+          <span class="btn-icon"> ⚱ </span>
+
+          <span> Filter </span>
+        </button>
+      </div>
+
+      <!-- ===================================================
+           CANDIDATE TABLE
+      ==================================================== -->
+
+      <div class="table-wrapper penerima-calon-table-wrapper">
+        <table class="data-table penerima-calon-table">
+          <thead>
+            <tr>
+              <th class="col-check">
+                <input type="checkbox" id="penerimaCalonSelectAll" />
+              </th>
+
+              <th>NAMA PENDUDUK</th>
+
+              <th>NIK</th>
+
+              <th>USIA</th>
+
+              <th>ALAMAT</th>
+
+              <th>STATUS</th>
+
+              <th class="col-action"></th>
+            </tr>
+          </thead>
+
+          <tbody id="penerimaCalonTableBody">
+            <tr>
+              <td colspan="7" class="table-empty">Memuat calon penerima...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===================================================
+           CANDIDATE PAGINATION
+      ==================================================== -->
+
+      <div class="penerima-pagination calon-pagination">
+        <div class="penerima-pagination-info" id="penerimaCalonPaginationInfo">
+          Menampilkan 0 data
+        </div>
+
+        <div
+          class="penerima-pagination-controls"
+          id="penerimaCalonPagination"
+        ></div>
+      </div>
+
+      <!-- ===================================================
+           CANDIDATE ACTIONS
+      ==================================================== -->
+
+      <div class="penerima-calon-actions">
+        <button
+          type="button"
+          class="btn btn-secondary penerima-select-all-btn"
+          onclick="PenerimaManfaat.selectAllCalon?.()"
+        >
+          Pilih Semua
+          <span id="penerimaCalonSelectAllCount"> (0) </span>
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary penerima-set-btn"
+          onclick="PenerimaManfaat.tetapkanPenerima?.()"
+        >
+          <span class="btn-icon"> ♙+ </span>
+
+          <span> Tetapkan sebagai Penerima </span>
+
+          <span class="penerima-selected-count" id="penerimaSelectedCount">
+            (0)
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         RIGHT
+         PENERIMA MANFAAT
+    ====================================================== -->
+
+    <div class="card penerima-panel penerima-list-panel">
+      <!-- ===================================================
+           PANEL TABS
+      ==================================================== -->
+
+      <div class="penerima-inner-tabs">
+        <button
+          type="button"
+          class="penerima-inner-tab active"
+          data-tab="penerima"
+          onclick="PenerimaManfaat.changeInnerTab?.('penerima')"
+        >
+          <span> Penerima Manfaat </span>
+
+          <span class="penerima-count-badge" id="penerimaListBadge"> 0 </span>
+        </button>
+
+        <button
+          type="button"
+          class="penerima-inner-tab"
+          data-tab="evaluasi"
+          onclick="PenerimaManfaat.changeInnerTab?.('evaluasi')"
+        >
+          <span> Riwayat Evaluasi </span>
+        </button>
+      </div>
+
+      <!-- ===================================================
+           PENERIMA TAB CONTENT
+      ==================================================== -->
+
+      <div class="penerima-inner-content" id="penerimaTabContent">
+        <div class="penerima-panel-subtitle">
+          Penduduk yang sudah ditetapkan sebagai penerima manfaat program ini.
+        </div>
+
+        <!-- RIGHT TOOLBAR -->
+
+        <div class="penerima-panel-toolbar">
+          <div class="search-box penerima-search">
+            <span class="search-icon"> ⌕ </span>
+
+            <input
+              type="text"
+              id="penerimaSearch"
+              placeholder="Cari penduduk, NIK, atau nama..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter-box penerima-status-filter">
+            <select id="penerimaStatusFilter">
+              <option value="">Semua Status</option>
+
+              <option value="AKTIF">Aktif</option>
+
+              <option value="NONAKTIF">Nonaktif</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- =================================================
+             KEEP OLD FILTER IDs
+        ================================================== -->
+
+        <div class="penerima-hidden-filters">
+          <select id="penerimaProgramFilter">
+            <option value="">Semua Program</option>
+          </select>
+
+          <select id="penerimaPeriodeFilter">
+            <option value="">Semua Periode</option>
+          </select>
+        </div>
+
+        <!-- =================================================
+             RECIPIENT TABLE
+        ================================================== -->
+
+        <div class="table-wrapper penerima-list-wrapper">
+          <table class="data-table penerima-table">
+            <thead>
+              <tr>
+                <th style="width: 55px">NO</th>
+
+                <th>NAMA PENDUDUK</th>
+
+                <th>NIK</th>
+
+                <th style="width: 125px">TGL PENETAPAN</th>
+
+                <th style="width: 105px">STATUS</th>
+
+                <th style="width: 105px">AKSI</th>
+              </tr>
+            </thead>
+
+            <tbody id="penerimaTableBody">
+              <tr>
+                <td colspan="6" class="table-empty">
+                  Memuat data penerima manfaat...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- =================================================
+             RIGHT PAGINATION
+        ================================================== -->
+
+        <div class="penerima-pagination">
+          <div class="penerima-pagination-info" id="penerimaPaginationInfo">
+            Menampilkan 0 data
+          </div>
+
+          <div
+            class="penerima-pagination-controls"
+            id="penerimaPagination"
+          ></div>
+        </div>
+      </div>
+
+      <!-- ===================================================
+           EVALUASI HISTORY CONTENT
+      ==================================================== -->
+
+      <div
+        class="penerima-inner-content penerima-evaluasi-content"
+        id="penerimaEvaluasiContent"
+        hidden
+      >
+        <div class="penerima-panel-subtitle">
+          Riwayat evaluasi program berdasarkan periode dan desa.
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table penerima-evaluasi-table">
+            <thead>
+              <tr>
+                <th>ID EVALUASI</th>
+
+                <th>PERIODE</th>
+
+                <th>TGL EVALUASI</th>
+
+                <th>TOTAL PENDUDUK</th>
+
+                <th>MEMENUHI</th>
+
+                <th>TIDAK MEMENUHI</th>
+
+                <th>STATUS</th>
+              </tr>
+            </thead>
+
+            <tbody id="penerimaEvaluasiTableBody">
+              <tr>
+                <td colspan="7" class="table-empty">
+                  Belum ada riwayat evaluasi.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       INFORMATION
+  ======================================================== -->
+
+  <div class="penerima-info-card">
+    <span class="penerima-info-card-icon"> ⓘ </span>
+
+    <span>
+      Evaluasi calon penerima dihitung berdasarkan kriteria aktif program pada
+      tanggal evaluasi terakhir. Pastikan data penduduk selalu diperbarui untuk
+      hasil yang akurat.
+    </span>
+  </div>
+
+  <!-- =======================================================
+       LEGACY SUMMARY ELEMENTS
+       Tetap dipertahankan agar penerima-manfaat.js lama
+       tidak error ketika melakukan update summary.
+  ======================================================== -->
+
+  <div class="penerima-legacy-elements" aria-hidden="true">
+    <span id="penerimaAktif">0</span>
+
+    <span id="penerimaProgramTotal">0</span>
+
+    <span id="penerimaPeriode">-</span>
+
+    <span id="countKawasi">0</span>
+
+    <span id="countSoligi">0</span>
+
+    <span id="penerimaDesaTitle"> Kawasi </span>
+
+    <span id="penerimaDesaDescription">
+      Daftar penerima manfaat dari Desa Kawasi
+    </span>
+  </div>
+</section>
+
+<!-- =========================================================
+     MODAL CONTAINER
+========================================================= -->
+
+<div id="penerimaManfaatModalContainer"></div>
+<div id="modalContainer"></div>

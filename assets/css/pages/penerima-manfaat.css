@@ -1,0 +1,1294 @@
+/* =========================================================
+   COMMUNITY DEVELOPMENT
+   PENERIMA MANFAAT
+   PAGE STYLES
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.penerima-page {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.penerima-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.penerima-header .page-header-content {
+  min-width: 0;
+}
+
+.penerima-header .page-breadcrumb {
+  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.penerima-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.penerima-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.penerima-header .page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.penerima-page .btn {
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.penerima-page .btn:hover {
+  transform: translateY(-1px);
+}
+
+.penerima-page .btn:active {
+  transform: translateY(0);
+}
+
+.penerima-page .btn-primary {
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+.penerima-page .btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.penerima-page .btn-secondary {
+  color: #2563eb;
+  background: #ffffff;
+  border-color: #dbe4f0;
+}
+
+.penerima-page .btn-secondary:hover {
+  background: #f8fbff;
+  border-color: #bfdbfe;
+}
+
+.penerima-page .btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+}
+
+/* =========================================================
+   DESA TABS
+========================================================= */
+
+.penerima-village-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.penerima-village-tab {
+  position: relative;
+
+  min-width: 260px;
+  min-height: 64px;
+
+  padding: 10px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+
+  color: #334155;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.penerima-village-tab:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.penerima-village-tab.active {
+  border-color: #3b82f6;
+  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.08);
+}
+
+.penerima-village-tab.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 3px;
+
+  background: #2563eb;
+  border-radius: 3px 3px 0 0;
+}
+
+.penerima-village-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #2563eb;
+  background: #eff6ff;
+
+  font-size: 18px;
+}
+
+.penerima-village-tab:nth-child(2) .penerima-village-icon {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.penerima-village-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.penerima-village-content strong {
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.penerima-village-content small {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   CARD BASE
+========================================================= */
+
+.penerima-page .card {
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+/* =========================================================
+   PROGRAM CARD
+========================================================= */
+
+.penerima-program-card {
+  margin-bottom: 18px;
+  padding: 18px 20px;
+}
+
+.penerima-program-selector {
+  display: grid;
+  grid-template-columns: auto minmax(280px, 1.05fr) minmax(260px, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.penerima-program-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+  background: #2563eb;
+
+  font-size: 22px;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.16);
+}
+
+.penerima-program-main {
+  min-width: 0;
+}
+
+.penerima-program-label,
+.penerima-program-description-label {
+  margin-bottom: 6px;
+
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.penerima-program-select-wrapper {
+  position: relative;
+}
+
+.penerima-program-select {
+  width: 100%;
+  height: 42px;
+
+  appearance: none;
+
+  padding: 0 38px 0 14px;
+
+  color: #1e293b;
+  background: #ffffff;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  outline: none;
+  cursor: pointer;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.penerima-program-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.penerima-program-arrow {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+
+  transform: translateY(-50%);
+
+  color: #64748b;
+  pointer-events: none;
+}
+
+.penerima-program-code {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.penerima-program-description {
+  min-width: 0;
+  padding-left: 4px;
+}
+
+.penerima-program-description p {
+  margin: 0;
+
+  max-width: 440px;
+
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.penerima-btn-kriteria {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.penerima-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.penerima-summary-card {
+  min-height: 96px;
+
+  padding: 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 13px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+.penerima-summary-icon {
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.summary-calon .penerima-summary-icon {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.summary-ditentukan .penerima-summary-icon {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.summary-tidak-memenuhi .penerima-summary-icon {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+.summary-penduduk .penerima-summary-icon {
+  color: #9333ea;
+  background: #faf5ff;
+}
+
+.penerima-summary-content {
+  min-width: 0;
+}
+
+.penerima-summary-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.penerima-summary-value {
+  margin-top: 2px;
+
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.penerima-summary-description {
+  margin-top: 3px;
+
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+.penerima-info-icon {
+  margin-left: 2px;
+  font-size: 10px;
+}
+
+/* =========================================================
+   WORKSPACE
+========================================================= */
+
+.penerima-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+
+  align-items: stretch;
+}
+
+.penerima-panel {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.penerima-panel-header {
+  padding: 17px 18px 13px;
+}
+
+.penerima-panel-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.penerima-panel-title-row h2 {
+  margin: 0;
+
+  color: #1e293b;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.penerima-panel-header p,
+.penerima-panel-subtitle {
+  margin: 5px 0 0;
+
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.penerima-count-badge {
+  min-width: 24px;
+  height: 20px;
+  padding: 0 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.penerima-panel-toolbar {
+  padding: 0 17px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.penerima-calon-search,
+.penerima-search {
+  flex: 1;
+  min-width: 0;
+}
+
+.penerima-panel .search-box input {
+  width: 100%;
+  height: 38px;
+
+  padding: 0 12px 0 35px;
+
+  color: #1e293b;
+  background: #ffffff;
+
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.penerima-panel .search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.penerima-panel .search-box input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.penerima-panel .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+
+  color: #64748b;
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+.penerima-filter-btn {
+  height: 38px;
+  min-height: 38px;
+  padding: 0 13px;
+}
+
+/* =========================================================
+   STATUS FILTER
+========================================================= */
+
+.penerima-status-filter {
+  min-width: 125px;
+}
+
+.penerima-status-filter select,
+.penerima-hidden-filters select {
+  height: 38px;
+
+  padding: 0 30px 0 11px;
+
+  color: #334155;
+  background: #ffffff;
+
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  outline: none;
+}
+
+/* =========================================================
+   HIDDEN LEGACY FILTER
+========================================================= */
+
+.penerima-hidden-filters {
+  display: none !important;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.penerima-page .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.penerima-page .data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  font-size: 14px;
+}
+
+.penerima-page .data-table thead th {
+  height: 40px;
+
+  padding: 0 10px;
+
+  color: #64748b;
+  background: #f8fafc;
+
+  border-top: 1px solid #eef2f7;
+  border-bottom: 1px solid #e5eaf0;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.penerima-page .data-table thead th:first-child {
+  padding-left: 17px;
+}
+
+.penerima-page .data-table tbody td {
+  height: 52px;
+
+  padding: 8px 10px;
+
+  color: #334155;
+
+  border-bottom: 1px solid #eef2f7;
+
+  vertical-align: middle;
+  white-space: nowrap;
+
+  font-size: 14px;
+}
+
+.penerima-page .data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.penerima-page .data-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.penerima-page .data-table tbody td:first-child {
+  padding-left: 17px;
+}
+
+.penerima-page .table-empty {
+  height: 130px !important;
+
+  color: #94a3b8 !important;
+
+  text-align: center !important;
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.penerima-page input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+
+  margin: 0;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   CALON TABLE
+========================================================= */
+
+.penerima-calon-table .col-check {
+  width: 38px;
+}
+
+.penerima-calon-table .col-action {
+  width: 30px;
+}
+
+.penerima-calon-table tbody td:nth-child(2) {
+  color: #334155;
+  font-weight: 600;
+}
+
+.penerima-calon-table tbody td:nth-child(3),
+.penerima-calon-table tbody td:nth-child(4),
+.penerima-calon-table tbody td:nth-child(5) {
+  color: #64748b;
+}
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.penerima-status-badge {
+  min-height: 22px;
+  padding: 3px 9px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.penerima-status-badge.active,
+.penerima-status-badge.aktif,
+.status-aktif {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.penerima-status-badge.inactive,
+.penerima-status-badge.nonaktif,
+.status-nonaktif {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.penerima-status-badge.meet,
+.penerima-status-badge.memenuhi {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.penerima-status-badge.not-meet {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+/* =========================================================
+   INNER TABS
+========================================================= */
+
+.penerima-inner-tabs {
+  min-height: 48px;
+
+  padding: 0 17px;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-bottom: 1px solid #e7ebf1;
+}
+
+.penerima-inner-tab {
+  position: relative;
+
+  height: 48px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #64748b;
+  background: transparent;
+  border: 0;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.penerima-inner-tab.active {
+  color: #2563eb;
+}
+
+.penerima-inner-tab.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 2px;
+
+  background: #2563eb;
+  border-radius: 2px 2px 0 0;
+}
+
+/* =========================================================
+   INNER CONTENT
+========================================================= */
+
+.penerima-inner-content {
+  min-width: 0;
+}
+
+.penerima-inner-content[hidden] {
+  display: none !important;
+}
+
+.penerima-inner-content .penerima-panel-subtitle {
+  padding: 10px 17px 9px;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.penerima-calon-actions {
+  padding: 10px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border-top: 1px solid #eef2f7;
+}
+
+.penerima-select-all-btn {
+  flex: 0 0 auto;
+}
+
+.penerima-set-btn {
+  flex: 1;
+}
+
+.penerima-selected-count {
+  opacity: 0.9;
+}
+
+/* =========================================================
+   ACTION ICONS
+========================================================= */
+
+.penerima-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.penerima-action-btn {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.penerima-action-view {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #dbeafe;
+}
+
+.penerima-action-view:hover {
+  background: #dbeafe;
+}
+
+.penerima-action-delete {
+  color: #ef4444;
+  background: #fef2f2;
+  border-color: #fee2e2;
+}
+
+.penerima-action-delete:hover {
+  background: #fee2e2;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.penerima-pagination {
+  min-height: 48px;
+
+  padding: 8px 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.penerima-pagination-info {
+  color: #64748b;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.penerima-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.penerima-pagination-controls button {
+  min-width: 29px;
+  height: 29px;
+
+  padding: 0 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.penerima-pagination-controls button:hover {
+  color: #2563eb;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.penerima-pagination-controls button.active {
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.penerima-pagination-controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   INFORMATION CARD
+========================================================= */
+
+.penerima-info-card {
+  margin-top: 14px;
+
+  min-height: 46px;
+
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #64748b;
+  background: #f8fbff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.penerima-info-card-icon {
+  flex: 0 0 auto;
+
+  color: #2563eb;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   EVALUASI TABLE
+========================================================= */
+
+.penerima-evaluasi-table tbody td {
+  font-size: 10px;
+}
+
+/* =========================================================
+   LEGACY ELEMENTS
+========================================================= */
+
+.penerima-legacy-elements {
+  display: none !important;
+}
+
+/* =========================================================
+   PROGRAM / TABLE EMPHASIS
+========================================================= */
+
+.penerima-page strong {
+  font-weight: 700;
+}
+
+.penerima-page .data-table td strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width: 1400px) {
+  .penerima-summary-card {
+    min-height: 102px;
+  }
+
+  .penerima-page .data-table {
+    font-size: 12px;
+  }
+
+  .penerima-page .data-table thead th {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .penerima-program-selector {
+    grid-template-columns: auto 1fr;
+  }
+
+  .penerima-program-description {
+    grid-column: 2;
+  }
+
+  .penerima-btn-kriteria {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .penerima-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .penerima-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .penerima-page {
+    padding: 0;
+  }
+
+  .penerima-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .penerima-header h1 {
+    font-size: 23px;
+  }
+
+  .penerima-header .page-header-actions {
+    width: 100%;
+  }
+
+  .penerima-header .page-header-actions .btn {
+    flex: 1;
+  }
+
+  /* -----------------------------------------
+     VILLAGE
+  ----------------------------------------- */
+
+  .penerima-village-tabs {
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .penerima-village-tab {
+    min-width: 220px;
+    flex: 0 0 auto;
+  }
+
+  /* -----------------------------------------
+     PROGRAM
+  ----------------------------------------- */
+
+  .penerima-program-selector {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .penerima-program-icon {
+    display: none;
+  }
+
+  .penerima-program-description {
+    grid-column: auto;
+    padding-left: 0;
+  }
+
+  .penerima-btn-kriteria {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* -----------------------------------------
+     SUMMARY
+  ----------------------------------------- */
+
+  .penerima-summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .penerima-summary-card {
+    min-height: 86px;
+    padding: 12px;
+    gap: 9px;
+  }
+
+  .penerima-summary-icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 17px;
+  }
+
+  .penerima-summary-value {
+    font-size: 20px;
+  }
+
+  .penerima-summary-description {
+    white-space: normal;
+    font-size: 9px;
+  }
+
+  /* -----------------------------------------
+     WORKSPACE
+  ----------------------------------------- */
+
+  .penerima-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  /* -----------------------------------------
+     TOOLBAR
+  ----------------------------------------- */
+
+  .penerima-panel-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .penerima-calon-search,
+  .penerima-search {
+    flex: 1 1 100%;
+  }
+
+  .penerima-filter-btn {
+    flex: 0 0 auto;
+  }
+
+  .penerima-status-filter {
+    flex: 1;
+  }
+
+  .penerima-status-filter select {
+    width: 100%;
+  }
+
+  /* -----------------------------------------
+     TABLE
+  ----------------------------------------- */
+
+  .penerima-page .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .penerima-page .data-table {
+    min-width: 620px;
+  }
+
+  /* -----------------------------------------
+     ACTION
+  ----------------------------------------- */
+
+  .penerima-calon-actions {
+    flex-direction: column;
+  }
+
+  .penerima-calon-actions .btn {
+    width: 100%;
+  }
+
+  /* -----------------------------------------
+     PAGINATION
+  ----------------------------------------- */
+
+  .penerima-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .penerima-pagination-controls {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .penerima-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .penerima-summary-card {
+    min-height: 76px;
+  }
+
+  .penerima-header .page-header-actions {
+    flex-direction: column;
+  }
+
+  .penerima-header .page-header-actions .btn {
+    width: 100%;
+  }
+
+  .penerima-village-tab {
+    min-width: 190px;
+  }
+}

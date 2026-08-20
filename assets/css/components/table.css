@@ -1,0 +1,53 @@
+/* =========================================
+   TABLE
+========================================= */
+
+.table-wrapper {
+  overflow: auto;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  background: #fff;
+}
+
+.table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 16px 20px;
+
+  background: #f8fafc;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid var(--border);
+
+  font-size: 14px;
+}
+
+.table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.table-empty {
+  text-align: center;
+
+  padding: 60px;
+
+  color: var(--text-light);
+}

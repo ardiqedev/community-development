@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Dieng Net — Discover Dieng through stay, nature and experience."
+    />
+
+    <title>Dieng Net — Explore Dieng</title>
+
+    <!-- =========================================
+         FONTS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================
+         PUBLIC CSS
+    ========================================== -->
+
+    <link rel="stylesheet" href="../assets/css/public/public.css" />
+
+    <link rel="stylesheet" href="../assets/css/public/home.css" />
+    <link rel="stylesheet" href="../assets/css/public/penginapan.css" />
+  </head>
+
+  <body>
+    <!-- =========================================
+     NAVBAR
+========================================== -->
+
+    <header class="public-navbar">
+      <div class="container navbar-inner">
+        <a href="./index.html" class="brand">
+          <span class="brand-mark"> DN </span>
+
+          <span class="brand-name"> Dieng Net </span>
+        </a>
+
+        <nav class="desktop-nav">
+          <a href="#stay"> Stay </a>
+
+          <a href="#explore"> Explore </a>
+
+          <a href="#experience"> Experience </a>
+        </nav>
+
+        <div class="navbar-actions">
+          <a href="#booking" class="btn btn-dark"> Book Your Stay </a>
+
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================
+     MOBILE MENU
+========================================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#stay"> Stay </a>
+
+      <a href="#explore"> Explore </a>
+
+      <a href="#experience"> Experience </a>
+
+      <a href="#booking" class="btn btn-dark"> Book Your Stay </a>
+    </div>
+
+    <main>
+      <!-- =========================================
+     HERO
+========================================== -->
+
+      <section class="hero">
+        <div class="hero-image">
+          <img
+            src="../assets/images/public/hero/dieng-hero.jpg"
+            alt="Pemandangan Dieng"
+          />
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <span class="eyebrow"> DISCOVER DIENG </span>
+
+            <h1>
+              Explore Dieng,
+              <br />
+              <em>Your Way.</em>
+            </h1>
+
+            <p>
+              Stay closer to nature, discover hidden places, and experience the
+              beauty of Dieng at your own pace.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#stay" class="btn btn-light"> Find Your Stay </a>
+
+              <a href="#explore" class="hero-link">
+                Explore Dieng
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO SEARCH -->
+
+        <div class="container hero-search-wrapper">
+          <div class="hero-search">
+            <div class="search-item">
+              <span class="search-label"> WHERE </span>
+
+              <strong> Dieng </strong>
+            </div>
+
+            <div class="search-divider"></div>
+
+            <div class="search-item">
+              <span class="search-label"> CHECK IN </span>
+
+              <strong> Add date </strong>
+            </div>
+
+            <div class="search-divider"></div>
+
+            <div class="search-item">
+              <span class="search-label"> CHECK OUT </span>
+
+              <strong> Add date </strong>
+            </div>
+
+            <div class="search-divider"></div>
+
+            <div class="search-item">
+              <span class="search-label"> GUESTS </span>
+
+              <strong> 2 Guests </strong>
+            </div>
+
+            <button type="button" class="search-button">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+     INTRO
+========================================== -->
+
+      <section class="section intro-section">
+        <div class="container intro-grid">
+          <div>
+            <span class="eyebrow eyebrow-dark"> THE DIENG EXPERIENCE </span>
+
+            <h2>
+              More than a place
+              <br />
+              to stay.
+            </h2>
+          </div>
+
+          <div class="intro-copy">
+            <p>
+              Dieng is a place to slow down, breathe the mountain air, wake up
+              above the clouds, and discover experiences that stay with you long
+              after the journey ends.
+            </p>
+
+            <a href="#explore" class="text-link">
+              Discover Dieng
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+     STAY
+========================================== -->
+
+      <section class="section stay-section" id="stay">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow eyebrow-dark"> STAY IN DIENG </span>
+
+              <h2>
+                Find your place
+                <br />
+                in the mountains.
+              </h2>
+            </div>
+
+            <a href="penginapan.html" class="text-link">
+              View all stays
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- =====================================
+             DYNAMIC STAY LIST
+        ====================================== -->
+
+          <div class="stay-grid" id="stayList">
+            <!--
+                Data dari:
+
+                PenginapanService
+
+                akan dirender oleh:
+
+                assets/js/public/home.js
+            -->
+
+            <!-- TEMPORARY CARD -->
+
+            <article class="stay-card">
+              <div class="stay-image">
+                <img
+                  src="../assets/images/public/hero/stay-placeholder.jpg"
+                  alt="Penginapan Dieng"
+                />
+              </div>
+
+              <div class="stay-content">
+                <span class="stay-location"> Dieng, Wonosobo </span>
+
+                <h3>Discover your stay</h3>
+
+                <p>Comfortable stays surrounded by the beauty of Dieng.</p>
+
+                <a href="penginapan.html" class="text-link">
+                  Explore stay
+                  <span>→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+     EXPLORE
+========================================== -->
+
+      <section class="section explore-section" id="explore">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow eyebrow-dark"> EXPLORE DIENG </span>
+
+              <h2>
+                Go beyond
+                <br />
+                the ordinary.
+              </h2>
+            </div>
+          </div>
+
+          <div class="explore-grid">
+            <!-- DESTINATION -->
+
+            <a href="#" class="explore-card explore-card-large">
+              <img
+                src="../assets/images/public/destinations/destination.jpg"
+                alt="Destinasi Dieng"
+              />
+
+              <div class="explore-card-overlay"></div>
+
+              <div class="explore-card-content">
+                <span> DISCOVER </span>
+
+                <h3>Places of Dieng</h3>
+
+                <p>Discover the landscapes, lakes and volcanic wonders.</p>
+              </div>
+            </a>
+
+            <!-- JEEP -->
+
+            <a href="#" class="explore-card">
+              <img
+                src="../assets/images/public/jeep/jeep.jpg"
+                alt="Jeep Dieng"
+              />
+
+              <div class="explore-card-overlay"></div>
+
+              <div class="explore-card-content">
+                <span> ADVENTURE </span>
+
+                <h3>Explore by Jeep</h3>
+
+                <p>Take the road less travelled.</p>
+              </div>
+            </a>
+
+            <!-- SUNRISE -->
+
+            <a href="#" class="explore-card">
+              <img
+                src="../assets/images/public/experiences/sunrise.jpg"
+                alt="Sunrise Dieng"
+              />
+
+              <div class="explore-card-overlay"></div>
+
+              <div class="explore-card-content">
+                <span> EXPERIENCE </span>
+
+                <h3>Sunrise above the clouds</h3>
+
+                <p>Start your morning differently.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+     EXPERIENCE
+========================================== -->
+
+      <section class="section experience-section" id="experience">
+        <div class="container experience-grid">
+          <div class="experience-image">
+            <img
+              src="../assets/images/public/experiences/dieng-experience.jpg"
+              alt="Pengalaman di Dieng"
+            />
+          </div>
+
+          <div class="experience-content">
+            <span class="eyebrow eyebrow-dark"> DIENG EXPERIENCE </span>
+
+            <h2>
+              Wake up.
+              <br />
+              Wander.
+              <br />
+              Remember.
+            </h2>
+
+            <p>
+              From quiet mornings above the clouds to adventures across the
+              volcanic landscape, Dieng invites you to experience the journey,
+              not just the destination.
+            </p>
+
+            <a href="#explore" class="btn btn-dark"> Explore Experiences </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+     BOOKING CTA
+========================================== -->
+
+      <section class="booking-section" id="booking">
+        <div class="container">
+          <div class="booking-card">
+            <span class="eyebrow"> YOUR DIENG JOURNEY </span>
+
+            <h2>
+              Ready to explore
+              <br />
+              Dieng?
+            </h2>
+
+            <p>Find a place to stay and start planning your journey.</p>
+
+            <a href="penginapan.html" class="btn btn-light"> Find Your Stay </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+     FOOTER
+========================================== -->
+
+    <footer class="public-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"> DN </span>
+
+            <span class="brand-name"> Dieng Net </span>
+          </div>
+
+          <p>Stay. Explore. Experience Dieng.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Discover</h4>
+
+          <a href="#stay"> Stay </a>
+
+          <a href="#explore"> Explore Dieng </a>
+
+          <a href="#experience"> Experience </a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Dieng</h4>
+
+          <a href="#"> About Dieng </a>
+
+          <a href="#"> Destinations </a>
+
+          <a href="#"> Travel Guide </a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span> © 2026 Dieng Net </span>
+
+        <span> Explore Dieng, Your Way. </span>
+      </div>
+    </footer>
+
+    <!-- =========================================
+     PUBLIC JS
+========================================== -->
+
+    <script type="module" src="../assets/js/public/public-app.js"></script>
+  </body>
+</html>

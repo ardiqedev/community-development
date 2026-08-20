@@ -1,0 +1,229 @@
+<div class="page">
+  <!-- =====================================================
+       SUMMARY
+  ====================================================== -->
+
+  <div class="grid grid-4">
+    <!-- Total Penduduk -->
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Total Penduduk </span>
+
+        <h2 class="stat-value" id="statTotalPenduduk">-</h2>
+
+        <span class="stat-change"> Data Penduduk </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="users"></i>
+      </div>
+    </div>
+
+    <!-- Total Program -->
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Total Program </span>
+
+        <h2 class="stat-value" id="statTotalProgram">-</h2>
+
+        <span class="stat-change" id="statProgramAktif"> - </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="target"></i>
+      </div>
+    </div>
+
+    <!-- Penerima Manfaat -->
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Penerima Manfaat </span>
+
+        <h2 class="stat-value" id="statTotalPenerima">-</h2>
+
+        <span class="stat-change" id="statPenerimaAktif"> - </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="hand-heart"></i>
+      </div>
+    </div>
+
+    <!-- Wilayah / Desa -->
+    <div class="card card-simple stat-card">
+      <div class="stat-content">
+        <span class="stat-label"> Wilayah / Desa </span>
+
+        <h2 class="stat-value" id="statTotalDesa">-</h2>
+
+        <span class="stat-change"> Sebaran Penduduk </span>
+      </div>
+
+      <div class="stat-icon">
+        <i data-lucide="map"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       ANALYTICS
+  ====================================================== -->
+
+  <div class="grid grid-2">
+    <!-- ===================================================
+         SEBARAN PENDUDUK
+    ==================================================== -->
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h3 class="card-title">Sebaran Penduduk</h3>
+
+          <p class="card-subtitle">Jumlah penduduk berdasarkan desa</p>
+        </div>
+
+        <div class="stat-icon">
+          <i data-lucide="map-pin"></i>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="chart-container" style="height: 280px">
+          <canvas id="chartSebaranDesa"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         PENERIMA PER PROGRAM
+    ==================================================== -->
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h3 class="card-title">Penerima Manfaat per Program</h3>
+
+          <p class="card-subtitle">Distribusi penerima berdasarkan program</p>
+        </div>
+
+        <div class="stat-icon">
+          <i data-lucide="bar-chart-3"></i>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="chart-container" style="height: 280px">
+          <canvas id="chartPenerimaProgram"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       DETAIL SUMMARY
+  ====================================================== -->
+
+  <div class="grid grid-2">
+    <!-- ===================================================
+         STATUS PROGRAM
+    ==================================================== -->
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h3 class="card-title">Status Program</h3>
+
+          <p class="card-subtitle">Ringkasan program community development</p>
+        </div>
+
+        <div class="stat-icon">
+          <i data-lucide="clipboard-check"></i>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="room-status-list">
+          <!-- Program Aktif -->
+          <div class="room-status-item">
+            <div class="room-status-label">
+              <span class="dot success"></span>
+
+              <span> Program Aktif </span>
+            </div>
+
+            <strong id="summaryProgramAktif"> - </strong>
+          </div>
+
+          <!-- Total Program -->
+          <div class="room-status-item">
+            <div class="room-status-label">
+              <span class="dot primary"></span>
+
+              <span> Total Program </span>
+            </div>
+
+            <strong id="summaryTotalProgram"> - </strong>
+          </div>
+        </div>
+
+        <!-- Persentase -->
+        <div class="room-total">
+          <span> Persentase Program Aktif </span>
+
+          <strong id="summaryProgramPercent"> - </strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         STATUS PENERIMA MANFAAT
+    ==================================================== -->
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h3 class="card-title">Penerima Manfaat</h3>
+
+          <p class="card-subtitle">Status penerima program</p>
+        </div>
+
+        <div class="stat-icon">
+          <i data-lucide="users-round"></i>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="room-status-list">
+          <!-- Penerima Aktif -->
+          <div class="room-status-item">
+            <div class="room-status-label">
+              <span class="dot success"></span>
+
+              <span> Penerima Aktif </span>
+            </div>
+
+            <strong id="summaryPenerimaAktif"> - </strong>
+          </div>
+
+          <!-- Total Penerima -->
+          <div class="room-status-item">
+            <div class="room-status-label">
+              <span class="dot primary"></span>
+
+              <span> Total Penerima </span>
+            </div>
+
+            <strong id="summaryTotalPenerima"> - </strong>
+          </div>
+        </div>
+
+        <!-- Persentase -->
+        <div class="room-total">
+          <span> Persentase Penerima Aktif </span>
+
+          <strong id="summaryPenerimaPercent"> - </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
