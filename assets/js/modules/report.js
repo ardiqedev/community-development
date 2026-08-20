@@ -83,23 +83,16 @@ const Report = (() => {
   async function init() {
     console.log("[REPORT] Init");
 
-    /*
-     * Pastikan halaman Report
-     * memang sudah ter-render.
-     */
-
     const desaSelect = document.getElementById("reportDesaFilter");
 
     if (!desaSelect) {
       console.warn("[REPORT] DOM belum siap.");
-
       return;
     }
 
-    /*
-     * Jangan load ulang master
-     * setiap masuk halaman.
-     */
+    /* ======================================================
+     FIRST INIT
+  ====================================================== */
 
     if (!state.initialized) {
       state.initialized = true;
@@ -114,12 +107,14 @@ const Report = (() => {
 
       console.log("[REPORT] Ready");
     } else {
-      /*
-       * Saat kembali ke halaman Report,
-       * pertahankan filter dan hasil.
-       */
+      /* ====================================================
+       RETURN TO REPORT
+    ==================================================== */
 
       syncFilterFromUI();
+
+      renderDesaFilter();
+      renderProgramFilter();
 
       renderTable();
     }

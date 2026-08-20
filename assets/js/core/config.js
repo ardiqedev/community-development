@@ -7,7 +7,7 @@ const CONFIG = {
      APPLICATION
   ===================================== */
 
-  APP_NAME: "Dieng Stay PMS",
+  APP_NAME: "Community Development System",
 
   VERSION: "1.0.0",
 
@@ -18,7 +18,7 @@ const CONFIG = {
   ===================================== */
 
   API: {
-    URL: "https://script.google.com/macros/s/AKfycbzhgUG3WuEFSoefTYUOsGmrPUhkTVI6AzgQ1rBVOwBDP8pzY3nWBTOE0gtai8JBpni1/exec",
+    URL: "https://script.google.com/macros/s/AKfycbxzLVHpY6Re2QN_OoCSAnzPQ6WeqvcxDWtJMCvjkE-U9ESy_gJsVVNgMTG7NqxnNDrl/exec",
 
     TIMEOUT: 30000,
   },

@@ -1,9 +1,4 @@
 /* ==========================================
-   DIENG STAY PMS
-   RESPONSIVE
-========================================== */
-
-/* ==========================================
    DESKTOP LARGE
 ========================================== */
 
@@ -36,32 +31,18 @@
 ========================================== */
 
 @media (max-width: 992px) {
-  /* Sidebar */
+  /* ========================================
+     SIDEBAR
+     Tidak diatur di sini.
+     
+     Sidebar dikontrol oleh:
+     sidebar.css
+     + Sidebar.toggle()
+  ======================================== */
 
-  .sidebar {
-    width: 80px;
-  }
-
-  .brand-text,
-  .menu-label,
-  .menu-item span,
-  .profile-info {
-    display: none;
-  }
-
-  .sidebar-brand,
-  .menu-item,
-  .profile {
-    justify-content: center;
-  }
-
-  .sidebar-header {
-    justify-content: center;
-
-    padding: 0;
-  }
-
-  /* Navbar */
+  /* ========================================
+     NAVBAR
+  ======================================== */
 
   .navbar-title span {
     display: none;
@@ -75,78 +56,52 @@
 /* ==========================================
    MOBILE
 ========================================== */
+/* ==========================================
+   MOBILE SIDEBAR
+========================================== */
 
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
 
     top: 0;
-
     left: -280px;
 
+    width: 280px;
     height: 100vh;
 
-    width: 280px;
+    z-index: 1001;
 
-    z-index: 1000;
-
-    transition: 0.3s;
+    transition: left 0.3s ease;
   }
 
   .sidebar.show {
     left: 0;
   }
 
-  .brand-text,
-  .menu-label,
-  .menu-item span,
-  .profile-info {
-    display: block;
+  /* .sidebar-backdrop {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 1000;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
   }
 
-  .sidebar-brand,
-  .menu-item,
-  .profile {
-    justify-content: flex-start;
-  }
-
-  .sidebar-header {
-    justify-content: flex-start;
-
-    padding: 0 24px;
-  }
-
-  /* Main */
-
-  .main {
-    width: 100%;
-  }
-
-  /* Navbar */
-
-  .navbar {
-    padding: 0 16px;
-  }
-
-  .navbar-title {
-    display: none;
-  }
-
-  .search-box {
-    display: none;
-  }
-
-  .profile-detail {
-    display: none;
-  }
-
-  /* Grid */
-
-  .grid-4,
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+  .sidebar-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  } */
 }
 
 /* ==========================================
